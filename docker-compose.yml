@@ -1,0 +1,33 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: sih
+      POSTGRES_PASSWORD: sih_dev
+      POSTGRES_DB: sih26092
+    ports:
+      # Published on 5433 so it never clashes with another local Postgres on 5432.
+      - "5433:5432"
+    volumes:
+      - sih_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sih -d sih26092"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./apps/backend
+    environment:
+      ENV: development
+      DATABASE_URL: postgresql+psycopg://sih:sih_dev@postgres:5432/sih26092
+      CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
+      RECOMMENDATION_ENGINE: mock
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  sih_pgdata:
