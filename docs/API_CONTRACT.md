@@ -5,6 +5,10 @@ field name or shape here without telling the team first. The backend
 implements exactly this; the frontend consumes exactly this.
 
 Base URL is environment driven. In development: `http://localhost:8000`.
+While the backend runs on the developer laptop it is also reachable through a
+public tunnel (the URL changes each time the tunnel restarts; ask for the
+current one). The permanent hosted URL comes from the Render blueprint in
+`render.yaml` once it is applied.
 Interactive docs: `/docs`. OpenAPI JSON: `/openapi.json`.
 
 All error responses share one shape:
@@ -131,13 +135,22 @@ Request:
   "project_cost": 300000,
   "education_status": null,
   "course": null,
+  "caste_certificate": true,
+  "entity_type": "Individual",
   "location": { "lat": 17.385, "lng": 78.4867 }
 }
 ```
 Validation: `is_sc` boolean required. `annual_income` number >= 0 required.
 `purpose` one of `business`, `education`. `activity`, `education_status`,
-`course` optional strings. `project_cost` optional number >= 0. `location`
+`course` optional strings. `project_cost` optional number >= 0.
+`caste_certificate` optional boolean. `entity_type` optional, one of
+`Individual`, `Partnership Firm`, `Co-operative Society`. `location`
 optional, `lat` in [-90, 90], `lng` in [-180, 180].
+
+The real engine needs `caste_certificate` and `entity_type` to confirm
+eligibility. Leave them out and it will not guess: the response comes back with
+`overall_status: "INSUFFICIENT_INFORMATION"` and lists them under
+`missing_information`, so the UI can ask the follow up question.
 
 Response 200:
 ```json
@@ -165,10 +178,19 @@ Response 200:
       "source_type": "prototype_mock"
     }
   ],
-  "engine": { "name": "mock", "is_prototype": true },
-  "disclaimer": "Based on the configured eligibility rules and available scheme information, these schemes appear to match your profile. This is guidance, not a government approval."
+  "engine": { "name": "module:app.intelligence.bridge:recommend", "is_prototype": false },
+  "disclaimer": "Based on the configured eligibility rules and available scheme information, these schemes appear to match your profile. This is guidance, not a government approval.",
+  "overall_status": "MATCHED",
+  "missing_information": []
 }
 ```
+`overall_status` is one of `MATCHED`, `NO_MATCH`, `INSUFFICIENT_INFORMATION`,
+`UNSUPPORTED_ACTIVITY` (null from the mock). `missing_information` is a list of
+`{ "field", "reason_keys" }` entries naming inputs the engine still needs.
+
+With the real engine, `reasons` are its stable reason keys, for example
+`INCOME_WITHIN_LIMIT` or `PROJECT_COST_ABOVE_MAX`, never free text. The
+frontend owns the English, Hindi and Telugu strings for each key.
 Recommendations are sorted eligible first, then by score descending.
 Ineligible schemes are included with `eligible: false` so the UI can explain
 why. `score` is an internal ranking score from 0 to 100, not a probability.

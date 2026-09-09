@@ -221,7 +221,16 @@ Developer 1 can plug in three ways, selected by `RECOMMENDATION_ENGINE`:
 - `http`: a service URL, e.g. `RECOMMENDATION_ENGINE_URL=http://engine:8001/recommend`,
   if they prefer to run separately.
 
-Nothing outside `intelligence/` knows which one is active. The mock is clearly
+Nothing outside `intelligence/` knows which one is active.
+
+Update after Developer 1's engine landed: their engine is a class with its own
+request and response dataclasses, so `app/intelligence/bridge.py` translates
+both ways and is the `module` target (`app.intelligence.bridge:recommend`). It
+adds two optional request fields the engine needs to confirm eligibility,
+`caste_certificate` and `entity_type`, and passes the engine's
+`overall_status` and `missing_information` through to the API so the UI can
+ask for what is missing instead of the backend guessing. The Docker build
+context is the repository root so `intelligence/` and `KB/` ship in the image. The mock is clearly
 labelled: every response carries `engine.is_prototype: true` and reasons that
 begin with "Prototype engine". It uses only fields already stored on the scheme
 rows; it contains no government eligibility rules of its own, so it cannot drift
