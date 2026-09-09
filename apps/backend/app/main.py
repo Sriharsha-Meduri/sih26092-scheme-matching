@@ -1,6 +1,7 @@
 import logging
 
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import health
@@ -48,6 +49,10 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
     register_error_handlers(app)
+    @app.get("/", include_in_schema=False)
+    def root() -> RedirectResponse:
+        return RedirectResponse(url="/docs")
+
     app.include_router(health.router)
     app.include_router(api_router)
     return app
