@@ -29,6 +29,8 @@ class RecommendRequest(BaseModel):
                 "project_cost": 300000,
                 "education_status": None,
                 "course": None,
+                "caste_certificate": True,
+                "entity_type": "Individual",
                 "location": {"lat": 17.385, "lng": 78.4867},
             }
         }
@@ -41,7 +43,23 @@ class RecommendRequest(BaseModel):
     project_cost: float | None = Field(default=None, ge=0, description="Total project cost in INR")
     education_status: str | None = Field(default=None, max_length=200)
     course: str | None = Field(default=None, max_length=200)
+    caste_certificate: bool | None = Field(
+        default=None,
+        description="Whether the applicant holds a caste certificate. The engine needs this to confirm eligibility; omit it and the response lists it under missing_information.",
+    )
+    entity_type: str | None = Field(
+        default=None,
+        max_length=60,
+        description="Individual, Partnership Firm, or Co-operative Society. Needed to confirm eligibility.",
+    )
     location: Location | None = None
+
+
+class MissingField(BaseModel):
+    """A field the engine needs before it can confirm eligibility. The UI should ask for it."""
+
+    field: str
+    reason_keys: list[str] = []
 
 
 class EngineInfo(BaseModel):
@@ -63,3 +81,11 @@ class RecommendResponse(BaseModel):
     recommendations: list[RecommendationItem]
     engine: EngineInfo
     disclaimer: str
+    overall_status: str | None = Field(
+        default=None,
+        description="From the real engine: MATCHED, NO_MATCH, INSUFFICIENT_INFORMATION, or UNSUPPORTED_ACTIVITY. Null from the mock.",
+    )
+    missing_information: list[MissingField] = Field(
+        default_factory=list,
+        description="Fields the engine still needs before it can confirm eligibility. Ask the user for these.",
+    )

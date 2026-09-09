@@ -2,7 +2,13 @@ from sqlalchemy.orm import Session
 
 from app.intelligence.engine import BeneficiaryProfile, RecommendationEngine, SchemeContext
 from app.repositories import scheme_repository
-from app.schemas.recommendation import EngineInfo, RecommendationItem, RecommendRequest, RecommendResponse
+from app.schemas.recommendation import (
+    EngineInfo,
+    MissingField,
+    RecommendationItem,
+    RecommendRequest,
+    RecommendResponse,
+)
 from app.schemas.scheme import SchemeFinancials
 
 DISCLAIMER = (
@@ -26,6 +32,8 @@ def recommend(db: Session, req: RecommendRequest, engine: RecommendationEngine) 
         project_cost=req.project_cost,
         education_status=req.education_status,
         course=req.course,
+        caste_certificate=req.caste_certificate,
+        entity_type=req.entity_type,
         location=req.location.model_dump() if req.location else None,
     )
     context = [SchemeContext.from_scheme(s) for s in schemes]
@@ -52,4 +60,6 @@ def recommend(db: Session, req: RecommendRequest, engine: RecommendationEngine) 
         recommendations=items,
         engine=EngineInfo(name=engine.name, is_prototype=engine.is_prototype),
         disclaimer=DISCLAIMER,
+        overall_status=result.overall_status,
+        missing_information=[MissingField(**m) for m in result.missing_information],
     )

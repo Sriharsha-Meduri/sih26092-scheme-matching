@@ -35,6 +35,8 @@ class BeneficiaryProfile(BaseModel):
     project_cost: float | None = None
     education_status: str | None = None
     course: str | None = None
+    caste_certificate: bool | None = None
+    entity_type: str | None = None
     location: dict[str, float] | None = None
 
 
@@ -80,6 +82,9 @@ class EngineRecommendation(BaseModel):
 
 class EngineResult(BaseModel):
     recommendations: list[EngineRecommendation]
+    # Optional extras a real engine may report; the mock leaves them empty.
+    overall_status: str | None = None
+    missing_information: list[dict[str, Any]] = Field(default_factory=list)
 
 
 @runtime_checkable
