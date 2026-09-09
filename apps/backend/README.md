@@ -62,17 +62,38 @@ See `.env.example`. Secrets never go in the repo. The important ones:
 - `RECOMMENDATION_ENGINE`, `mock` (default), `module`, or `http`, plus the matching
   `RECOMMENDATION_ENGINE_MODULE` or `RECOMMENDATION_ENGINE_URL`.
 
-## Plugging in the real recommendation engine (Developer 1)
-Implement the contract in `app/intelligence/engine.py`:
+## The real recommendation engine (Developer 1) is wired in
+Developer 1's deterministic engine lives at the repository root
+(`intelligence/`, reading `KB/`). The backend reaches it through
+`app/intelligence/bridge.py`, selected by:
 
-- In process: expose a callable `func(profile: dict, schemes: list[dict]) -> {"recommendations": [...]}`
-  and set `RECOMMENDATION_ENGINE=module` and `RECOMMENDATION_ENGINE_MODULE=your.module:func`.
-- As a service: accept the profile dict as a POST body and return the same shape;
-  set `RECOMMENDATION_ENGINE=http` and `RECOMMENDATION_ENGINE_URL`.
+```
+RECOMMENDATION_ENGINE=module
+RECOMMENDATION_ENGINE_MODULE=app.intelligence.bridge:recommend
+```
 
-Nothing else in the backend changes. Load verified scheme, rule, activity,
-course, requirement and source rows into the existing tables; the API serves
-them unchanged.
+That is the default in `.env.example`, `docker-compose.yml` and `render.yaml`.
+The bridge needs the `intelligence` package importable: from the repo it finds
+it automatically; in Docker it is copied beside the app. `RECOMMENDATION_ENGINE=mock`
+falls back to the labelled placeholder if the package is absent.
+
+The engine will not confirm eligibility without `caste_certificate` and
+`entity_type`; omit them and the response says `INSUFFICIENT_INFORMATION` and
+lists them in `missing_information`.
+
+## Public URL for the frontend
+Two ways to get one:
+
+- **Now, from this laptop:** `cloudflared tunnel --url http://localhost:8000`
+  prints a public `https://...trycloudflare.com` URL while it runs. Good for
+  integration; the URL changes on every restart and dies when the laptop sleeps.
+- **Permanent:** `render.yaml` at the repo root is a Render blueprint. In Render:
+  New, Blueprint, connect the GitHub repo, Apply. It creates the web service and
+  a free PostgreSQL and wires `DATABASE_URL`. The free instance sleeps when idle
+  and wakes in about a minute on the first request.
+
+Hosted Postgres URLs that start with `postgres://` or `postgresql://` are
+accepted as is; the backend adds the driver itself.
 
 ## Seed data is a placeholder
 `scripts/seed.py` loads clearly labelled prototype data (`source_type =

@@ -1,0 +1,29 @@
+# Render blueprint. In Render: New, Blueprint, connect this repo, Apply.
+# Creates the backend web service and a free PostgreSQL, wired together.
+services:
+  - type: web
+    name: sih26092-backend
+    runtime: docker
+    plan: free
+    dockerfilePath: apps/backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sih26092-db
+          property: connectionString
+      - key: RECOMMENDATION_ENGINE
+        value: module
+      - key: RECOMMENDATION_ENGINE_MODULE
+        value: app.intelligence.bridge:recommend
+      - key: CORS_ORIGINS
+        value: http://localhost:3000,http://127.0.0.1:3000
+      - key: CORS_ORIGIN_REGEX
+        value: https://.*\.vercel\.app
+
+databases:
+  - name: sih26092-db
+    plan: free
