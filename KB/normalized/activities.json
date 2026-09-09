@@ -1,0 +1,2056 @@
+{
+  "entity": "activity",
+  "count": 146,
+  "records": [
+    {
+      "id": "ACT-001",
+      "name": "Agricultural Land Purchase",
+      "source_name": "Agricultural Land Purchase",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-002",
+      "name": "Hatcheries",
+      "source_name": "Hatcheries",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-003",
+      "name": "Duckery",
+      "source_name": "Duckery",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-004",
+      "name": "Goat Rearing",
+      "source_name": "Goat Rearing",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-005",
+      "name": "Sheep Farming",
+      "source_name": "Sheep Farming",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-006",
+      "name": "Fisheries",
+      "source_name": "Fisheries",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-007",
+      "name": "Ornamental Fish Rearing",
+      "source_name": "Ornamental Fish Rearing",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-008",
+      "name": "Tractors",
+      "source_name": "Tractors",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-009",
+      "name": "Power Tillers",
+      "source_name": "Power Tillers",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-010",
+      "name": "Cultivation & Processing of Medicinal Plants",
+      "source_name": "Cultivation & Processing of Medicinal Plants",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-011",
+      "name": "Honey Bee Cultivation",
+      "source_name": "Honey Bee Cultivation",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-012",
+      "name": "Irrigation Borewells/Minor Irrigation",
+      "source_name": "Irrigation Borewells/Minor Irrigation",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-013",
+      "name": "Agricultural Implements",
+      "source_name": "Agricultural Implements",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-014",
+      "name": "Horticulture",
+      "source_name": "Horticulture",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-015",
+      "name": "Sericulture",
+      "source_name": "Sericulture",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-016",
+      "name": "Layers / Broilers",
+      "source_name": "Layers / Broilers",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-017",
+      "name": "Cows / Buffaloes",
+      "source_name": "Cows / Buffaloes",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-018",
+      "name": "Piggery",
+      "source_name": "Piggery",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-019",
+      "name": "Aquaculture",
+      "source_name": "Aquaculture",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-020",
+      "name": "Floriculture",
+      "source_name": "Floriculture",
+      "sector_ids": [
+        "SECTOR-AGR"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-021",
+      "name": "Automobile Repair / Servicing Units",
+      "source_name": "Automobile Repair / Servicing Units",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-022",
+      "name": "Brick Making",
+      "source_name": "Brick Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-023",
+      "name": "Bicycle Repairing Shops",
+      "source_name": "Bicycle Repairing Shops",
+      "sector_ids": [
+        "SECTOR-SII",
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": "Exact duplicate of source entry across sectors (SECTOR-SII, SECTOR-STT); merged into one canonical activity.",
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": [
+        "DQ-013"
+      ]
+    },
+    {
+      "id": "ACT-024",
+      "name": "Bicycle Seat Cover Making",
+      "source_name": "Bicycle Seat Cover Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-025",
+      "name": "Biogas Plant",
+      "source_name": "Biogas Plant",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-026",
+      "name": "Candle Manufacturing",
+      "source_name": "Candle Manufacturing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-027",
+      "name": "Car Upholstery & Seat Making",
+      "source_name": "Car Upholstery & Seat Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-028",
+      "name": "Cement Solid Blocks",
+      "source_name": "Cement Solid Blocks",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-029",
+      "name": "Coir Industry",
+      "source_name": "Coir Industry",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-030",
+      "name": "Carpet Manufacturing",
+      "source_name": "Carpet Manufacturing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-031",
+      "name": "Copperware/Utensils Manufacturing",
+      "source_name": "Copperware/Utensils Manufacturing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-032",
+      "name": "Exercise Books & Registers Making",
+      "source_name": "Exercise Books & Registers Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-033",
+      "name": "Readymade Garment Manufacturing",
+      "source_name": "Readymade Garment Manufacturing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-034",
+      "name": "Ginger & Turmeric Processing",
+      "source_name": "Ginger & Turmeric Processing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-035",
+      "name": "Granite Tiles",
+      "source_name": "Granite Tiles",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-036",
+      "name": "Handmade Paper",
+      "source_name": "Handmade Paper",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-037",
+      "name": "Ornaments Polishing Units",
+      "source_name": "Ornaments Polishing Units",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-038",
+      "name": "Stone Crushing",
+      "source_name": "Stone Crushing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-039",
+      "name": "Supari Processing",
+      "source_name": "Supari Processing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-040",
+      "name": "Printing Press",
+      "source_name": "Printing Press",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-041",
+      "name": "Furniture Making",
+      "source_name": "Furniture Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-042",
+      "name": "Flour Mill",
+      "source_name": "Flour Mill",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-043",
+      "name": "Soft Toys Making",
+      "source_name": "Soft Toys Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-044",
+      "name": "Handlooms/Powerlooms",
+      "source_name": "Handlooms/Powerlooms",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-045",
+      "name": "Embroidery/Knitting",
+      "source_name": "Embroidery/Knitting",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-046",
+      "name": "Woollen Garments/Shawls Making etc.",
+      "source_name": "Woollen Garments/Shawls Making etc.",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-047",
+      "name": "Hosiery Units",
+      "source_name": "Hosiery Units",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-048",
+      "name": "Jute Fabrics/Bags",
+      "source_name": "Jute Fabrics/Bags",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-049",
+      "name": "Leather Garments",
+      "source_name": "Leather Garments",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-050",
+      "name": "Leather Processing",
+      "source_name": "Leather Processing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-051",
+      "name": "Leather & Rexine Articles",
+      "source_name": "Leather & Rexine Articles",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-052",
+      "name": "Lime Kilns",
+      "source_name": "Lime Kilns",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-053",
+      "name": "Plastic Bags Manufacturing",
+      "source_name": "Plastic Bags Manufacturing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-054",
+      "name": "Potteries",
+      "source_name": "Potteries",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-055",
+      "name": "Handicrafts Making",
+      "source_name": "Handicrafts Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-056",
+      "name": "Pouch Making",
+      "source_name": "Pouch Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-057",
+      "name": "Powerlooms",
+      "source_name": "Powerlooms",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-058",
+      "name": "Incense Stick Making",
+      "source_name": "Incense Stick Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-059",
+      "name": "Rubber Industry",
+      "source_name": "Rubber Industry",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-060",
+      "name": "Shoe/Chappal Manufacturing",
+      "source_name": "Shoe/Chappal Manufacturing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-061",
+      "name": "Umbrella Making",
+      "source_name": "Umbrella Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-062",
+      "name": "Fiberglass Manufacturing",
+      "source_name": "Fiberglass Manufacturing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-063",
+      "name": "Mineral Water Bottling Plant",
+      "source_name": "Mineral Water Bottling Plant",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-064",
+      "name": "Oil Mills",
+      "source_name": "Oil Mills",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-065",
+      "name": "Saw Mills",
+      "source_name": "Saw Mills",
+      "sector_ids": [
+        "SECTOR-SII",
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": "Exact duplicate of source entry across sectors (SECTOR-SII, SECTOR-STT); merged into one canonical activity.",
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": [
+        "DQ-013"
+      ]
+    },
+    {
+      "id": "ACT-066",
+      "name": "Footwear Manufacturing",
+      "source_name": "Footwear Manufacturing",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-067",
+      "name": "Soft/Stuffed Toys Making",
+      "source_name": "Soft/Stuffed Toys Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-068",
+      "name": "Silver Ornaments Making",
+      "source_name": "Silver Ornaments Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-069",
+      "name": "Bakery",
+      "source_name": "Bakery",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-070",
+      "name": "Bamboo Furniture Making",
+      "source_name": "Bamboo Furniture Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-071",
+      "name": "Battery Making",
+      "source_name": "Battery Making",
+      "sector_ids": [
+        "SECTOR-SII"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-072",
+      "name": "Departmental Stores",
+      "source_name": "Departmental Stores",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-073",
+      "name": "Beautician",
+      "source_name": "Beautician",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-074",
+      "name": "Band Party",
+      "source_name": "Band Party",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-075",
+      "name": "Fish/Meat Shops",
+      "source_name": "Fish/Meat Shops",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-076",
+      "name": "Petty Shops",
+      "source_name": "Petty Shops",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-077",
+      "name": "Diagnostic Center / Blood Bank",
+      "source_name": "Diagnostic Center / Blood Bank",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-078",
+      "name": "Book Binding/Book Shops",
+      "source_name": "Book Binding/Book Shops",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-079",
+      "name": "Cards Shop",
+      "source_name": "Cards Shop",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-080",
+      "name": "Clinical Labs",
+      "source_name": "Clinical Labs",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-081",
+      "name": "Stationery Shops",
+      "source_name": "Stationery Shops",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-082",
+      "name": "Cloth Merchant",
+      "source_name": "Cloth Merchant",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-083",
+      "name": "Computer Centres",
+      "source_name": "Computer Centres",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-084",
+      "name": "Computer Hardware & Servicing",
+      "source_name": "Computer Hardware & Servicing",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-085",
+      "name": "Dental Clinics",
+      "source_name": "Dental Clinics",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-086",
+      "name": "Desktop Printing",
+      "source_name": "Desktop Printing",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-087",
+      "name": "Driving School",
+      "source_name": "Driving School",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-088",
+      "name": "Eye Clinics",
+      "source_name": "Eye Clinics",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-089",
+      "name": "Food Packing Unit",
+      "source_name": "Food Packing Unit",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-090",
+      "name": "Gas Agency",
+      "source_name": "Gas Agency",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-091",
+      "name": "Gem Stone Cutting & Polishing",
+      "source_name": "Gem Stone Cutting & Polishing",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-092",
+      "name": "Photography/Videography",
+      "source_name": "Photography/Videography",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-093",
+      "name": "Shopping Complex",
+      "source_name": "Shopping Complex",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-094",
+      "name": "Shuttering",
+      "source_name": "Shuttering",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-095",
+      "name": "Spice Grinding",
+      "source_name": "Spice Grinding",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-096",
+      "name": "Spray Painting",
+      "source_name": "Spray Painting",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-097",
+      "name": "Silk Weaving",
+      "source_name": "Silk Weaving",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-098",
+      "name": "Steel Fabrication",
+      "source_name": "Steel Fabrication",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-099",
+      "name": "Sweet Shop",
+      "source_name": "Sweet Shop",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-100",
+      "name": "Tailoring",
+      "source_name": "Tailoring",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-101",
+      "name": "Water Sports Equipments",
+      "source_name": "Water Sports Equipments",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-102",
+      "name": "Chemist Shops",
+      "source_name": "Chemist Shops",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-103",
+      "name": "Wooden/Steel Furniture",
+      "source_name": "Wooden/Steel Furniture",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-104",
+      "name": "Dhabas/Mini Hotels",
+      "source_name": "Dhabas/Mini Hotels",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-105",
+      "name": "Tourist Lodge",
+      "source_name": "Tourist Lodge",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-106",
+      "name": "Automobile Repairs",
+      "source_name": "Automobile Repairs",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-107",
+      "name": "Electrical Items Shop",
+      "source_name": "Electrical Items Shop",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-108",
+      "name": "Hardware Shop",
+      "source_name": "Hardware Shop",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-109",
+      "name": "Electrical Winding",
+      "source_name": "Electrical Winding",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-110",
+      "name": "Welding & Refrigeration",
+      "source_name": "Welding & Refrigeration",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-111",
+      "name": "Vegetable Vending",
+      "source_name": "Vegetable Vending",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-112",
+      "name": "Watch Repair/Sales Shop",
+      "source_name": "Watch Repair/Sales Shop",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-113",
+      "name": "Bangle/Cosmetic Shop",
+      "source_name": "Bangle/Cosmetic Shop",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-114",
+      "name": "Digital Mixing Lab",
+      "source_name": "Digital Mixing Lab",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-115",
+      "name": "Seeds/Fertilizers/Pesticides Shops",
+      "source_name": "Seeds/Fertilizers/Pesticides Shops",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-116",
+      "name": "Auto Rickshaws/Auto Load Carrier",
+      "source_name": "Auto Rickshaws/Auto Load Carrier",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-117",
+      "name": "Light Commercial Vehicles/Mini Buses",
+      "source_name": "Light Commercial Vehicles/Mini Buses",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-118",
+      "name": "Jeeps/Car Taxies",
+      "source_name": "Jeeps/Car Taxies",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-119",
+      "name": "Earth Movers (JCB) etc.",
+      "source_name": "Earth Movers (JCB) etc.",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-120",
+      "name": "Laundry/Dry-cleaning Shops",
+      "source_name": "Laundry/Dry-cleaning Shops",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-121",
+      "name": "Machine Shops",
+      "source_name": "Machine Shops",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-122",
+      "name": "Marble Polishing",
+      "source_name": "Marble Polishing",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-123",
+      "name": "Milk Chilling Centres/Booths",
+      "source_name": "Milk Chilling Centres/Booths",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-124",
+      "name": "Garments Shop",
+      "source_name": "Garments Shop",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-125",
+      "name": "Mobile Crane",
+      "source_name": "Mobile Crane",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-126",
+      "name": "Nursing Home/Hospitals",
+      "source_name": "Nursing Home/Hospitals",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-127",
+      "name": "Nursery School",
+      "source_name": "Nursery School",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-128",
+      "name": "Passenger/Fishing Boats",
+      "source_name": "Passenger/Fishing Boats",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-129",
+      "name": "Public Address System",
+      "source_name": "Public Address System",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-130",
+      "name": "Pump Set/Minor Irrigation",
+      "source_name": "Pump Set/Minor Irrigation",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-131",
+      "name": "Ropeway",
+      "source_name": "Ropeway",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-132",
+      "name": "Sales & Servicing of Electric Items",
+      "source_name": "Sales & Servicing of Electric Items",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-133",
+      "name": "Supplying Unit",
+      "source_name": "Supplying Unit",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-134",
+      "name": "Commercial Centre (STD/Photocopier/Scanner)",
+      "source_name": "Commercial Centre (STD/Photocopier/Scanner)",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-135",
+      "name": "Seeds & Pesticides Shops",
+      "source_name": "Seeds & Pesticides Shops",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-136",
+      "name": "Tannery",
+      "source_name": "Tannery",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-137",
+      "name": "Tent House/Decorators",
+      "source_name": "Tent House/Decorators",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-138",
+      "name": "Transport Vehicles (Autos, Taxies, LCVs, Buses, Trucks)",
+      "source_name": "Transport Vehicles (Autos, Taxies, LCVs, Buses, Trucks)",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-139",
+      "name": "Travel Agency",
+      "source_name": "Travel Agency",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-140",
+      "name": "TV/Audio-Video/Refrigerator/AC Repair",
+      "source_name": "TV/Audio-Video/Refrigerator/AC Repair",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-141",
+      "name": "Typing School",
+      "source_name": "Typing School",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-142",
+      "name": "Tyre Retreading",
+      "source_name": "Tyre Retreading",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-143",
+      "name": "Tyre Servicing & Vulcanising",
+      "source_name": "Tyre Servicing & Vulcanising",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-144",
+      "name": "Xerox/Typing/Lamination Centre",
+      "source_name": "Xerox/Typing/Lamination Centre",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-145",
+      "name": "Internet Cafe",
+      "source_name": "Internet Cafe",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    },
+    {
+      "id": "ACT-146",
+      "name": "Cable TV",
+      "source_name": "Cable TV",
+      "sector_ids": [
+        "SECTOR-STT"
+      ],
+      "aliases": [],
+      "normalization_notes": null,
+      "sources": [
+        "S004"
+      ],
+      "data_quality_issues": []
+    }
+  ]
+}

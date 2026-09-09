@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "document_requirement.schema.json",
+  "title": "Document requirements",
+  "type": "object",
+  "required": ["entity", "records", "gap_notes"],
+  "properties": {
+    "entity": { "const": "document_requirement" },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "document", "scheme_ids", "rule_derived", "mandatory", "status", "source", "notes"],
+        "properties": {
+          "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+          "document": { "type": "string" },
+          "scheme_ids": { "type": "array", "items": { "type": "string" } },
+          "rule_derived": { "$ref": "kb_defs.schema.json#/$defs/derived_marker", "description": "true = requirement derived from an eligibility RULE (e.g. caste certificate), not from a documents list." },
+          "mandatory": { "type": "boolean" },
+          "status": { "type": "string", "enum": ["VERIFIED", "UNVERIFIED", "NOT_SPECIFIED"] },
+          "source": { "type": ["string", "null"] },
+          "notes": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "gap_notes": { "type": ["string", "null"] }
+  }
+}

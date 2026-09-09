@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "source.schema.json",
+  "title": "Canonical Source registry entry",
+  "type": "object",
+  "required": [
+    "id", "title", "category", "authority_level", "authority_level_conflict",
+    "publisher", "url", "format", "publication_date", "retrieved_date",
+    "notes", "data_quality_issues"
+  ],
+  "properties": {
+    "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+    "title": { "type": "string" },
+    "category": { "type": ["string", "null"], "enum": ["01_Core", "02_Activities", "03_Application", "04_Partners", "05_Operations", "06_LendingPolicy", "07_GovContext", "08_Evidence", "09_Documents", "10_Stories", null] },
+    "authority_level": { "type": "string", "enum": ["PRIMARY_CURRENT", "SECONDARY_HISTORICAL", "CONFLICTED"] },
+    "authority_level_conflict": {
+      "type": ["object", "null"],
+      "properties": { "json_snapshot_value": { "type": "string" }, "excel_register_value": { "type": "string" } }
+    },
+    "publisher": { "type": ["string", "null"] },
+    "url": { "type": ["string", "null"] },
+    "format": { "type": "string", "enum": ["Web page", "PDF", "Gov release/pdf" ] },
+    "publication_date": { "type": ["string", "null"], "format": "date" },
+    "retrieved_date": { "type": ["string", "null"], "format": "date" },
+    "notes": { "type": ["string", "null"] },
+    "data_quality_issues": { "$ref": "kb_defs.schema.json#/$defs/source_ref" }
+  }
+}

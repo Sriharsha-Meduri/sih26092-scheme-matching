@@ -1,0 +1,201 @@
+{
+  "entity": "eligibility_rule",
+  "count": 7,
+  "records": [
+    {
+      "id": "E001",
+      "name": "Community: Scheduled Caste (SC)",
+      "scope": {
+        "type": "ALL_CORE_SCHEMES",
+        "schemes": null,
+        "scheme_group": null,
+        "scope_derived": true,
+        "notes": "Source scope: 'All NSFDC credit/loan schemes'. Interpreted as all 5 core schemes in this KB."
+      },
+      "field": "community",
+      "operator": "==",
+      "raw_operator": "must_be",
+      "value": "Scheduled Caste (SC)",
+      "unit": null,
+      "condition_group": null,
+      "explanation": "Applicant must belong to SC community.",
+      "original_explanation": "Applicant must belong to SC community.",
+      "priority": null,
+      "effective_from": null,
+      "effective_until": null,
+      "sources": [
+        "S003",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "Source scope: 'All NSFDC credit/loan schemes'. Interpreted as all 5 core schemes in this KB."
+    },
+    {
+      "id": "E002",
+      "name": "Income: ₹5,00,000 annual family income",
+      "scope": {
+        "type": "ALL_CORE_SCHEMES",
+        "schemes": null,
+        "scheme_group": null,
+        "scope_derived": true,
+        "notes": "Source scope: 'All NSFDC credit/loan schemes'. Effective date 2026-01-07 extracted from explanation text."
+      },
+      "field": "annual_family_income",
+      "operator": "<=",
+      "raw_operator": "less_than_or_equal",
+      "value": 500000,
+      "unit": "INR",
+      "condition_group": null,
+      "explanation": "Applies to rural and urban areas; effective 2026-01-07.",
+      "original_explanation": "Applies to rural and urban areas; effective 2026-01-07.",
+      "priority": null,
+      "effective_from": "2026-01-07",
+      "effective_until": null,
+      "sources": [
+        "S003",
+        "S002"
+      ],
+      "data_quality_issues": [
+        "DQ-006"
+      ],
+      "notes": "Source scope: 'All NSFDC credit/loan schemes'. Effective date 2026-01-07 extracted from explanation text."
+    },
+    {
+      "id": "E003",
+      "name": "Caste certificate: Valid certificate from competent authority",
+      "scope": {
+        "type": "ALL_CORE_SCHEMES",
+        "schemes": null,
+        "scheme_group": null,
+        "scope_derived": true,
+        "notes": "Source scope: 'All NSFDC credit/loan schemes'."
+      },
+      "field": "caste_certificate",
+      "operator": "EXISTS",
+      "raw_operator": "required",
+      "value": "Valid certificate from competent authority",
+      "unit": null,
+      "condition_group": null,
+      "explanation": "Required to establish SC community status.",
+      "original_explanation": "Required to establish SC community status.",
+      "priority": null,
+      "effective_from": null,
+      "effective_until": null,
+      "sources": [
+        "S003"
+      ],
+      "data_quality_issues": [],
+      "notes": "Source scope: 'All NSFDC credit/loan schemes'."
+    },
+    {
+      "id": "E004",
+      "name": "Entity type: Individual",
+      "scope": {
+        "type": "SCHEME_GROUP",
+        "schemes": null,
+        "scheme_group": "income_generating",
+        "scope_derived": false,
+        "notes": "Source scope: 'Income-generating activities'."
+      },
+      "field": "entity_type",
+      "operator": "IN",
+      "raw_operator": "allowed",
+      "value": "Individual",
+      "unit": null,
+      "condition_group": "ENTITY_TYPE_ALLOWED",
+      "explanation": "Eligible entity type.",
+      "original_explanation": "Eligible entity type.",
+      "priority": null,
+      "effective_from": null,
+      "effective_until": null,
+      "sources": [
+        "S003"
+      ],
+      "data_quality_issues": [],
+      "notes": "Source scope: 'Income-generating activities'."
+    },
+    {
+      "id": "E005",
+      "name": "Entity type: Partnership Firm",
+      "scope": {
+        "type": "SCHEME_GROUP",
+        "schemes": null,
+        "scheme_group": "income_generating",
+        "scope_derived": false,
+        "notes": "Source scope: 'Income-generating activities'. Partnership: ALL members SC; each member family income <= 5L."
+      },
+      "field": "entity_type",
+      "operator": "IN",
+      "raw_operator": "allowed",
+      "value": "Partnership Firm",
+      "unit": null,
+      "condition_group": "ENTITY_TYPE_ALLOWED",
+      "explanation": "All members must belong to SC; each member's annual family income must not exceed ₹5 lakh.",
+      "original_explanation": "All members must belong to SC; each member's annual family income must not exceed ₹5 lakh.",
+      "priority": null,
+      "effective_from": null,
+      "effective_until": null,
+      "sources": [
+        "S003"
+      ],
+      "data_quality_issues": [],
+      "notes": "Source scope: 'Income-generating activities'. Partnership: ALL members SC; each member family income <= 5L."
+    },
+    {
+      "id": "E006",
+      "name": "Entity type: Co-operative Society",
+      "scope": {
+        "type": "SCHEME_GROUP",
+        "schemes": null,
+        "scheme_group": "income_generating",
+        "scope_derived": false,
+        "notes": "Source scope: 'Income-generating activities'. Society: ALL members SC; each member family income <= 5L."
+      },
+      "field": "entity_type",
+      "operator": "IN",
+      "raw_operator": "allowed",
+      "value": "Co-operative Society",
+      "unit": null,
+      "condition_group": "ENTITY_TYPE_ALLOWED",
+      "explanation": "All members must belong to SC; each member's annual family income must not exceed ₹5 lakh.",
+      "original_explanation": "All members must belong to SC; each member's annual family income must not exceed ₹5 lakh.",
+      "priority": null,
+      "effective_from": null,
+      "effective_until": null,
+      "sources": [
+        "S003"
+      ],
+      "data_quality_issues": [],
+      "notes": "Source scope: 'Income-generating activities'. Society: ALL members SC; each member family income <= 5L."
+    },
+    {
+      "id": "E007",
+      "name": "Income: no ceiling",
+      "scope": {
+        "type": "EXTERNAL_DOMAIN",
+        "schemes": [],
+        "scheme_group": null,
+        "scope_derived": true,
+        "notes": "Source scope: 'Skill Development Training' — a DOMAIN OUTSIDE the 5 core schemes (DQ-007). Do NOT auto-apply to loan eligibility; no income criterion stated. Retained in KB for context/FAQ matching."
+      },
+      "field": "annual_family_income",
+      "operator": "NO_CEILING",
+      "raw_operator": "no_ceiling",
+      "value": "None",
+      "unit": null,
+      "condition_group": null,
+      "explanation": "This is not a loan eligibility rule; NSFDC states no income criterion for skill-development training.",
+      "original_explanation": "This is not a loan eligibility rule; NSFDC states no income criterion for skill-development training.",
+      "priority": null,
+      "effective_from": null,
+      "effective_until": null,
+      "sources": [
+        "S003"
+      ],
+      "data_quality_issues": [
+        "DQ-007"
+      ],
+      "notes": "Source scope: 'Skill Development Training' — a DOMAIN OUTSIDE the 5 core schemes (DQ-007). Do NOT auto-apply to loan eligibility; no income criterion stated. Retained in KB for context/FAQ matching."
+    }
+  ]
+}

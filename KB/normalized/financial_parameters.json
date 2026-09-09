@@ -1,0 +1,1189 @@
+{
+  "entity": "financial_parameter",
+  "count": 51,
+  "records": [
+    {
+      "id": "FP-NSFDC-MFS-001",
+      "scheme_id": "NSFDC-MFS",
+      "parameter": "project_cost_min",
+      "parameter_label": "Project cost minimum",
+      "value": null,
+      "value_original": null,
+      "type": "number",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "No lower bound specified in source.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "no lower bound specified"
+    },
+    {
+      "id": "FP-NSFDC-MFS-002",
+      "scheme_id": "NSFDC-MFS",
+      "parameter": "project_cost_max",
+      "parameter_label": "Project cost maximum",
+      "value": 140000,
+      "value_original": "140000",
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "Maximum project cost eligible (INR).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-MFS-003",
+      "scheme_id": "NSFDC-MFS",
+      "parameter": "loan_amount_min",
+      "parameter_label": "Loan amount minimum",
+      "value": null,
+      "value_original": null,
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "No loan floor specified in source.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "no loan floor specified"
+    },
+    {
+      "id": "FP-NSFDC-MFS-004",
+      "scheme_id": "NSFDC-MFS",
+      "parameter": "loan_amount_max",
+      "parameter_label": "Loan amount maximum",
+      "value": 125000,
+      "value_original": "125000",
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "Maximum loan amount (INR).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-MFS-005",
+      "scheme_id": "NSFDC-MFS",
+      "parameter": "financing_percent",
+      "parameter_label": "Financing percentage",
+      "value": 90,
+      "value_original": "90",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Share of project cost financed (stated 'up to' in PS; constant 90 in seed).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-MFS-006",
+      "scheme_id": "NSFDC-MFS",
+      "parameter": "nsfdc_interest_rate",
+      "parameter_label": "NSFDC rate to channel",
+      "value": 2.5,
+      "value_original": "2.5",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Rate NSFDC charges the channelizing agency.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-MFS-007",
+      "scheme_id": "NSFDC-MFS",
+      "parameter": "beneficiary_interest_rate",
+      "parameter_label": "Beneficiary interest rate",
+      "value": 6.5,
+      "value_original": "6.5",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Rate charged to the beneficiary.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-MFS-008",
+      "scheme_id": "NSFDC-MFS",
+      "parameter": "repayment_period_years",
+      "parameter_label": "Repayment period (years)",
+      "value": 3,
+      "value_original": "3",
+      "type": "integer",
+      "unit": "years",
+      "condition": null,
+      "derived": false,
+      "definition": "Repayment period in years.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-MFS-009",
+      "scheme_id": "NSFDC-MFS",
+      "parameter": "moratorium_months",
+      "parameter_label": "Moratorium (months)",
+      "value": 3,
+      "value_original": "3",
+      "type": "integer",
+      "unit": "months",
+      "condition": null,
+      "derived": false,
+      "definition": "Moratorium in months.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-MFS-010",
+      "scheme_id": "NSFDC-MFS",
+      "parameter": "installment_frequency",
+      "parameter_label": "Installment frequency",
+      "value": "Quarterly",
+      "value_original": "Quarterly",
+      "type": "string",
+      "unit": null,
+      "condition": null,
+      "derived": false,
+      "definition": "Repayment installment cadence; null for ELS (course-length dependent).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-TL-001",
+      "scheme_id": "NSFDC-TL",
+      "parameter": "project_cost_min",
+      "parameter_label": "Project cost minimum (exclusive)",
+      "value": 140000,
+      "value_original": "140000.01",
+      "type": "number",
+      "unit": "INR",
+      "condition": null,
+      "derived": true,
+      "definition": "Lower bound is STRICT: project cost must exceed Rs 1,40,000 (raw value 140000.01 encodes the exclusive boundary).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [
+        "DQ-001"
+      ],
+      "notes": "Raw float '140000.01' in field 'project_cost_min_inclusive' is an encoding hack for a strict/exclusive lower bound: project cost must EXCEED Rs 1,40,000."
+    },
+    {
+      "id": "FP-NSFDC-TL-002",
+      "scheme_id": "NSFDC-TL",
+      "parameter": "project_cost_max",
+      "parameter_label": "Project cost maximum",
+      "value": 5000000,
+      "value_original": "5000000",
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "Maximum project cost eligible (INR).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-TL-003",
+      "scheme_id": "NSFDC-TL",
+      "parameter": "loan_amount_min",
+      "parameter_label": "Loan amount minimum",
+      "value": null,
+      "value_original": null,
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "No loan floor specified in source.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "no loan floor specified"
+    },
+    {
+      "id": "FP-NSFDC-TL-004",
+      "scheme_id": "NSFDC-TL",
+      "parameter": "loan_amount_max",
+      "parameter_label": "Loan amount maximum",
+      "value": 4500000,
+      "value_original": "4500000",
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "Maximum loan amount (INR).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-TL-005",
+      "scheme_id": "NSFDC-TL",
+      "parameter": "financing_percent",
+      "parameter_label": "Financing percentage",
+      "value": 90,
+      "value_original": "90",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Share of project cost financed (stated 'up to' in PS; constant 90 in seed).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-TL-006",
+      "scheme_id": "NSFDC-TL",
+      "parameter": "nsfdc_interest_rate",
+      "parameter_label": "NSFDC rate to channel",
+      "value": 4,
+      "value_original": "4",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Rate NSFDC charges the channelizing agency.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-TL-007",
+      "scheme_id": "NSFDC-TL",
+      "parameter": "beneficiary_interest_rate",
+      "parameter_label": "Beneficiary interest rate",
+      "value": 8,
+      "value_original": "8",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Rate charged to the beneficiary.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-TL-008",
+      "scheme_id": "NSFDC-TL",
+      "parameter": "repayment_period_years",
+      "parameter_label": "Repayment period (years)",
+      "value": 7,
+      "value_original": "7",
+      "type": "integer",
+      "unit": "years",
+      "condition": null,
+      "derived": false,
+      "definition": "Repayment period in years.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-TL-009",
+      "scheme_id": "NSFDC-TL",
+      "parameter": "moratorium_months",
+      "parameter_label": "Moratorium (months)",
+      "value": {
+        "type": "conditional",
+        "variable": "activity_category",
+        "branches": [
+          {
+            "when": {
+              "IN": [
+                "Plantation",
+                "Construction"
+              ]
+            },
+            "value": 12,
+            "note": "Scheme notes: '12-month moratorium for plantation and construction activities.' Corroborated by Excel Current Scheme Snapshot (TL row)."
+          },
+          {
+            "when": {
+              "NOT_IN": [
+                "Plantation",
+                "Construction"
+              ]
+            },
+            "value": 6,
+            "note": "Default per current scheme page (S001) and Excel Snapshot."
+          }
+        ],
+        "note": "Normalized from moratorium_months=6 plus free-text notes."
+      },
+      "value_original": "6",
+      "type": "conditional",
+      "unit": "months",
+      "condition": {
+        "type": "conditional",
+        "variable": "activity_category",
+        "branches": [
+          {
+            "when": {
+              "IN": [
+                "Plantation",
+                "Construction"
+              ]
+            },
+            "value": 12,
+            "note": "Scheme notes: '12-month moratorium for plantation and construction activities.' Corroborated by Excel Current Scheme Snapshot (TL row)."
+          },
+          {
+            "when": {
+              "NOT_IN": [
+                "Plantation",
+                "Construction"
+              ]
+            },
+            "value": 6,
+            "note": "Default per current scheme page (S001) and Excel Snapshot."
+          }
+        ],
+        "note": "Normalized from moratorium_months=6 plus free-text notes."
+      },
+      "derived": true,
+      "definition": "6 months standard; 12 months for plantation/construction activities.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "Normalized from moratorium_months=6 plus free-text notes."
+    },
+    {
+      "id": "FP-NSFDC-TL-010",
+      "scheme_id": "NSFDC-TL",
+      "parameter": "installment_frequency",
+      "parameter_label": "Installment frequency",
+      "value": "Quarterly",
+      "value_original": "Quarterly",
+      "type": "string",
+      "unit": null,
+      "condition": null,
+      "derived": false,
+      "definition": "Repayment installment cadence; null for ELS (course-length dependent).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-AMY-001",
+      "scheme_id": "NSFDC-AMY",
+      "parameter": "project_cost_min",
+      "parameter_label": "Project cost minimum",
+      "value": null,
+      "value_original": null,
+      "type": "number",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "No lower bound specified in source.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "no lower bound specified"
+    },
+    {
+      "id": "FP-NSFDC-AMY-002",
+      "scheme_id": "NSFDC-AMY",
+      "parameter": "project_cost_max",
+      "parameter_label": "Project cost maximum",
+      "value": 140000,
+      "value_original": "140000",
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "Maximum project cost eligible (INR).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-AMY-003",
+      "scheme_id": "NSFDC-AMY",
+      "parameter": "loan_amount_min",
+      "parameter_label": "Loan amount minimum",
+      "value": null,
+      "value_original": null,
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "No loan floor specified in source.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "no loan floor specified"
+    },
+    {
+      "id": "FP-NSFDC-AMY-004",
+      "scheme_id": "NSFDC-AMY",
+      "parameter": "loan_amount_max",
+      "parameter_label": "Loan amount maximum",
+      "value": 125000,
+      "value_original": "125000",
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "Maximum loan amount (INR).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-AMY-005",
+      "scheme_id": "NSFDC-AMY",
+      "parameter": "financing_percent",
+      "parameter_label": "Financing percentage",
+      "value": 90,
+      "value_original": "90",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Share of project cost financed (stated 'up to' in PS; constant 90 in seed).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-AMY-006",
+      "scheme_id": "NSFDC-AMY",
+      "parameter": "nsfdc_interest_rate",
+      "parameter_label": "NSFDC rate to channel",
+      "value": 5,
+      "value_original": "5",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Rate NSFDC charges the channelizing agency.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-AMY-007",
+      "scheme_id": "NSFDC-AMY",
+      "parameter": "beneficiary_interest_rate",
+      "parameter_label": "Beneficiary interest rate",
+      "value": 15,
+      "value_original": "15",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Rate charged to the beneficiary.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-AMY-008",
+      "scheme_id": "NSFDC-AMY",
+      "parameter": "repayment_period_years",
+      "parameter_label": "Repayment period (years)",
+      "value": 3,
+      "value_original": "3",
+      "type": "integer",
+      "unit": "years",
+      "condition": null,
+      "derived": false,
+      "definition": "Repayment period in years.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-AMY-009",
+      "scheme_id": "NSFDC-AMY",
+      "parameter": "moratorium_months",
+      "parameter_label": "Moratorium (months)",
+      "value": 3,
+      "value_original": "3",
+      "type": "integer",
+      "unit": "months",
+      "condition": null,
+      "derived": false,
+      "definition": "Moratorium in months.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-AMY-010",
+      "scheme_id": "NSFDC-AMY",
+      "parameter": "installment_frequency",
+      "parameter_label": "Installment frequency",
+      "value": "Quarterly",
+      "value_original": "Quarterly",
+      "type": "string",
+      "unit": null,
+      "condition": null,
+      "derived": false,
+      "definition": "Repayment installment cadence; null for ELS (course-length dependent).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-UNY-001",
+      "scheme_id": "NSFDC-UNY",
+      "parameter": "project_cost_min",
+      "parameter_label": "Project cost minimum",
+      "value": null,
+      "value_original": null,
+      "type": "number",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "No lower bound specified in source.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "no lower bound specified"
+    },
+    {
+      "id": "FP-NSFDC-UNY-002",
+      "scheme_id": "NSFDC-UNY",
+      "parameter": "project_cost_max",
+      "parameter_label": "Project cost maximum",
+      "value": 500000,
+      "value_original": "500000",
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "Maximum project cost eligible (INR).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-UNY-003",
+      "scheme_id": "NSFDC-UNY",
+      "parameter": "loan_amount_min",
+      "parameter_label": "Loan amount minimum",
+      "value": null,
+      "value_original": null,
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "No loan floor specified in source.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "no loan floor specified"
+    },
+    {
+      "id": "FP-NSFDC-UNY-004",
+      "scheme_id": "NSFDC-UNY",
+      "parameter": "loan_amount_max",
+      "parameter_label": "Loan amount maximum",
+      "value": 450000,
+      "value_original": "450000",
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "Maximum loan amount (INR).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-UNY-005",
+      "scheme_id": "NSFDC-UNY",
+      "parameter": "financing_percent",
+      "parameter_label": "Financing percentage",
+      "value": 90,
+      "value_original": "90",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Share of project cost financed (stated 'up to' in PS; constant 90 in seed).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-UNY-006",
+      "scheme_id": "NSFDC-UNY",
+      "parameter": "nsfdc_interest_rate",
+      "parameter_label": "NSFDC rate to channel",
+      "value": 5,
+      "value_original": "5",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Rate NSFDC charges the channelizing agency.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-UNY-007",
+      "scheme_id": "NSFDC-UNY",
+      "parameter": "beneficiary_interest_rate",
+      "parameter_label": "Beneficiary interest rate (channel-dependent)",
+      "value": {
+        "type": "conditional",
+        "variable": "channel_type",
+        "branches": [
+          {
+            "when": {
+              "IN": [
+                "Co-operative Banks",
+                "Co-operative Societies"
+              ]
+            },
+            "value": 13,
+            "note": "13% through Cooperative Banks/Societies"
+          },
+          {
+            "when": {
+              "IN": [
+                "Small Finance Banks (SFBs)"
+              ]
+            },
+            "value": 15,
+            "note": "15% through SFBs"
+          }
+        ],
+        "note": "Normalized from string '13 (Co-op Banks/Societies); 15 (SFBs)'. Value 13; 'Co-op Banks/Societies' is treated as a channel-group alias."
+      },
+      "value_original": "13 (Co-op Banks/Societies); 15 (SFBs)",
+      "type": "conditional",
+      "unit": "percent",
+      "condition": {
+        "type": "conditional",
+        "variable": "channel_type",
+        "branches": [
+          {
+            "when": {
+              "IN": [
+                "Co-operative Banks",
+                "Co-operative Societies"
+              ]
+            },
+            "value": 13,
+            "note": "13% through Cooperative Banks/Societies"
+          },
+          {
+            "when": {
+              "IN": [
+                "Small Finance Banks (SFBs)"
+              ]
+            },
+            "value": 15,
+            "note": "15% through SFBs"
+          }
+        ],
+        "note": "Normalized from string '13 (Co-op Banks/Societies); 15 (SFBs)'. Value 13; 'Co-op Banks/Societies' is treated as a channel-group alias."
+      },
+      "derived": true,
+      "definition": "Channel-dependent: 13% via Co-op Banks/Societies; 15% via SFBs.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [
+        "DQ-002"
+      ],
+      "notes": "Normalized from string '13 (Co-op Banks/Societies); 15 (SFBs)'. Value 13; 'Co-op Banks/Societies' is treated as a channel-group alias."
+    },
+    {
+      "id": "FP-NSFDC-UNY-008",
+      "scheme_id": "NSFDC-UNY",
+      "parameter": "repayment_period_years",
+      "parameter_label": "Repayment period (years)",
+      "value": 5,
+      "value_original": "5",
+      "type": "integer",
+      "unit": "years",
+      "condition": null,
+      "derived": false,
+      "definition": "Repayment period in years.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-UNY-009",
+      "scheme_id": "NSFDC-UNY",
+      "parameter": "moratorium_months",
+      "parameter_label": "Moratorium (months)",
+      "value": 3,
+      "value_original": "3",
+      "type": "integer",
+      "unit": "months",
+      "condition": null,
+      "derived": false,
+      "definition": "Moratorium in months.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-UNY-010",
+      "scheme_id": "NSFDC-UNY",
+      "parameter": "installment_frequency",
+      "parameter_label": "Installment frequency",
+      "value": "Quarterly or half-yearly",
+      "value_original": "Quarterly or half-yearly",
+      "type": "string",
+      "unit": null,
+      "condition": null,
+      "derived": false,
+      "definition": "Repayment installment cadence; null for ELS (course-length dependent).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-ELS-001",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "project_cost_min",
+      "parameter_label": "Project cost minimum",
+      "value": null,
+      "value_original": null,
+      "type": "number",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "No lower bound specified in source.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "no lower bound specified"
+    },
+    {
+      "id": "FP-NSFDC-ELS-002",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "project_cost_max",
+      "parameter_label": "Project cost maximum",
+      "value": 4000000,
+      "value_original": "4000000",
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "Maximum project cost eligible (INR).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-ELS-003",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "loan_amount_min",
+      "parameter_label": "Loan amount minimum",
+      "value": null,
+      "value_original": null,
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "No loan floor specified in source.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": "no loan floor specified"
+    },
+    {
+      "id": "FP-NSFDC-ELS-004",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "loan_amount_max",
+      "parameter_label": "Loan amount maximum",
+      "value": 4000000,
+      "value_original": "4000000",
+      "type": "integer",
+      "unit": "INR",
+      "condition": null,
+      "derived": false,
+      "definition": "Maximum loan amount (INR).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [
+        "DQ-005"
+      ],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-ELS-005",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "financing_percent",
+      "parameter_label": "Financing percentage",
+      "value": 90,
+      "value_original": "90",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Share of project cost financed (stated 'up to' in PS; constant 90 in seed).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-ELS-006",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "nsfdc_interest_rate",
+      "parameter_label": "NSFDC rate to channel",
+      "value": 2.5,
+      "value_original": "2.5",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Rate NSFDC charges the channelizing agency.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-ELS-007",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "beneficiary_interest_rate",
+      "parameter_label": "Beneficiary interest rate",
+      "value": 6.5,
+      "value_original": "6.5",
+      "type": "number",
+      "unit": "percent",
+      "condition": null,
+      "derived": false,
+      "definition": "Rate charged to the beneficiary.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-ELS-008",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "repayment_period_years",
+      "parameter_label": "Repayment period (years)",
+      "value": {
+        "type": "conditional",
+        "variable": "repayment_has_started",
+        "branches": [
+          {
+            "when": {
+              "==": false
+            },
+            "value": 12,
+            "note": "'12 if repayment has not started'"
+          },
+          {
+            "when": {
+              "==": true
+            },
+            "value": 10,
+            "note": "'10 if repayment has started'"
+          }
+        ],
+        "note": "Normalized from string '12 if repayment has not started; 10 if repayment has started'. Excel Snapshot corroborates 'Up to 10-12 years depending on status'."
+      },
+      "value_original": "12 if repayment has not started; 10 if repayment has started",
+      "type": "conditional",
+      "unit": "years",
+      "condition": {
+        "type": "conditional",
+        "variable": "repayment_has_started",
+        "branches": [
+          {
+            "when": {
+              "==": false
+            },
+            "value": 12,
+            "note": "'12 if repayment has not started'"
+          },
+          {
+            "when": {
+              "==": true
+            },
+            "value": 10,
+            "note": "'10 if repayment has started'"
+          }
+        ],
+        "note": "Normalized from string '12 if repayment has not started; 10 if repayment has started'. Excel Snapshot corroborates 'Up to 10-12 years depending on status'."
+      },
+      "derived": true,
+      "definition": "12 years if repayment has not started; 10 years if it has started.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [
+        "DQ-003"
+      ],
+      "notes": "Normalized from string '12 if repayment has not started; 10 if repayment has started'. Excel Snapshot corroborates 'Up to 10-12 years depending on status'."
+    },
+    {
+      "id": "FP-NSFDC-ELS-009",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "moratorium_months",
+      "parameter_label": "Moratorium",
+      "value": {
+        "type": "conditional",
+        "variable": "repayment_has_started",
+        "branches": [
+          {
+            "when": {
+              "==": false
+            },
+            "value": "Course period + 1 year",
+            "note": "Course period is course-specific and NOT in the KB; requires user input or course-family assumption (M0 B7). "
+          },
+          {
+            "when": {
+              "==": true
+            },
+            "value": "up to 6 months",
+            "note": "'up to 6 months if repayment has started'"
+          }
+        ],
+        "note": "Normalized from string 'Course period + 1 year if repayment has not started; up to 6 months if repayment has started'."
+      },
+      "value_original": "Course period + 1 year if repayment has not started; up to 6 months if repayment has started",
+      "type": "conditional",
+      "unit": "months",
+      "condition": {
+        "type": "conditional",
+        "variable": "repayment_has_started",
+        "branches": [
+          {
+            "when": {
+              "==": false
+            },
+            "value": "Course period + 1 year",
+            "note": "Course period is course-specific and NOT in the KB; requires user input or course-family assumption (M0 B7). "
+          },
+          {
+            "when": {
+              "==": true
+            },
+            "value": "up to 6 months",
+            "note": "'up to 6 months if repayment has started'"
+          }
+        ],
+        "note": "Normalized from string 'Course period + 1 year if repayment has not started; up to 6 months if repayment has started'."
+      },
+      "derived": true,
+      "definition": "Course period + 1 year if repayment not started; up to 6 months otherwise.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [
+        "DQ-004"
+      ],
+      "notes": "Normalized from string 'Course period + 1 year if repayment has not started; up to 6 months if repayment has started'."
+    },
+    {
+      "id": "FP-NSFDC-ELS-010",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "installment_frequency",
+      "parameter_label": "Installment frequency",
+      "value": null,
+      "value_original": "None",
+      "type": "string",
+      "unit": null,
+      "condition": null,
+      "derived": false,
+      "definition": "Repayment installment cadence; null for ELS (course-length dependent).",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [],
+      "notes": null
+    },
+    {
+      "id": "FP-NSFDC-ELS-011",
+      "scheme_id": "NSFDC-ELS",
+      "parameter": "loan_cap_formula",
+      "parameter_label": "Loan cap formula (ELS)",
+      "value": {
+        "type": "formula",
+        "kind": "min",
+        "terms": [
+          {
+            "kind": "const",
+            "value": 4000000,
+            "unit": "INR",
+            "label": "Rs 40 lakh"
+          },
+          {
+            "kind": "percent_of",
+            "percent": 90,
+            "of": "course_fee",
+            "unit": "INR",
+            "label": "90% of course fee"
+          }
+        ],
+        "derived": true,
+        "source_note": "Scheme notes: 'Maximum is Rs 40 lakh or 90% of course fee, whichever is less.'"
+      },
+      "value_original": null,
+      "type": "formula",
+      "unit": null,
+      "condition": null,
+      "derived": true,
+      "definition": "Lesser of Rs 40 lakh or 90% of course fee.",
+      "sources": [
+        "S001",
+        "S002"
+      ],
+      "data_quality_issues": [
+        "DQ-005"
+      ],
+      "notes": "Scheme notes: 'Maximum is Rs 40 lakh or 90% of course fee, whichever is less.'"
+    }
+  ]
+}

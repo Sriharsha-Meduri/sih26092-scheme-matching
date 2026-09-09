@@ -1,0 +1,513 @@
+{
+  "entity": "source",
+  "count": 34,
+  "records": [
+    {
+      "id": "S001",
+      "title": "NSFDC current scheme master page",
+      "category": "01_Core",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/scheme",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": "2026-09-08",
+      "notes": "Current loan scheme limits, rates, repayment, ELS course coverage",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S002",
+      "title": "NSFDC FAQ",
+      "category": "01_Core",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/faqs",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": "2026-09-08",
+      "notes": "Current eligibility, ₹5L income ceiling, application, channel partners, scheme summary, prudential norms",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S003",
+      "title": "NSFDC Eligibility Requirements",
+      "category": "01_Core",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/eligibility-requirements",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": "2026-09-08",
+      "notes": "SC requirement, entity types, income rules, verification responsibility",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S004",
+      "title": "NSFDC Indicative Activities",
+      "category": "02_Activities",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/indicative-activities",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": "2026-09-08",
+      "notes": "Business/activity taxonomy for matching user intent to eligible activities",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S005",
+      "title": "NSFDC How to Apply",
+      "category": "03_Application",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/how-to-apply-2",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": "2026-09-08",
+      "notes": "Application flow and channelization",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S006",
+      "title": "NSFDC Forms",
+      "category": null,
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/form",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": "2026-09-08",
+      "notes": "Term Loan and Education Loan downloadable application forms",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S007",
+      "title": "NSFDC Channel Partners hub",
+      "category": "04_Partners",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/our-channel-partners",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": "2026-09-08",
+      "notes": "Official partner categories and downloadable partner lists",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S008",
+      "title": "NSFDC Information Disclosed on Own Initiative",
+      "category": "09_Documents",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/information-disclosed-on-own-initiative",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": "2026-09-08",
+      "notes": "Lending policies, refinance documents, CSR and corporate guidelines",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S009",
+      "title": "NSFDC Compendium of Schemes",
+      "category": "01_Core",
+      "authority_level": "CONFLICTED",
+      "authority_level_conflict": {
+        "json_snapshot_value": "Secondary/historical",
+        "excel_register_value": "Primary"
+      },
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/UploadedFiles/other/2024-05-15/1-4-1.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": "2026-09-08",
+      "notes": "Detailed/historical scheme compendium, scheme purposes and parameters",
+      "data_quality_issues": [
+        "DQ-008"
+      ]
+    },
+    {
+      "id": "S010",
+      "title": "State Channelizing Agencies (SCAs)",
+      "category": "04_Partners",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/channel-partners/attachments/20260401_164458_Ip6UJm.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "38 SCA/state-level channelizing agencies and addresses",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S011",
+      "title": "Public Sector Banks (PSBs)",
+      "category": "04_Partners",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/channel-partners/attachments/20260408_100623_Bea3za.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "11 listed PSBs and addresses",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S012",
+      "title": "Regional Rural Banks (RRBs)",
+      "category": "04_Partners",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/channel-partners/attachments/20260401_163145_9tiTZM.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "RRB partner list and addresses",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S013",
+      "title": "NBFC-MFIs",
+      "category": "04_Partners",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/channel-partners/attachments/20251223_101231_7smjJC.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "NBFC-MFI partner list and addresses",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S014",
+      "title": "Other Agencies & SIDBI",
+      "category": "04_Partners",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/channel-partners/attachments/20260408_101214_Yw5CGQ.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Other channel agencies and SIDBI",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S015",
+      "title": "Small Finance Banks",
+      "category": "04_Partners",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/uploads/images/banners/20260408_100851_UrGTfH.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Small Finance Bank partner list",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S016",
+      "title": "Cooperative Societies",
+      "category": "04_Partners",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/uploads/images/banners/20260408_101711_6Iyved.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Cooperative society partner list",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S017",
+      "title": "NSFDC State/Agency Utilisation as of 31 Jul 2026",
+      "category": "05_Operations",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/uploads/performance-data/20260813_170559_Dw7BWj.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Sanction, net disbursement, utilisation %, pending amount, beneficiaries by agency",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S018",
+      "title": "NSFDC Performance Data hub",
+      "category": "05_Operations",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/performance-data",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Excel/PDF datasets for disbursement, beneficiaries, partner-wise and state-wise performance",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S019",
+      "title": "ELS Policy for Banks under Refinance",
+      "category": "06_LendingPolicy",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/uploads-file/media/20260731_122156_6-1-2.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Institutional ELS/refinance rules",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S020",
+      "title": "Lending Policy for Banks and RRBs",
+      "category": "06_LendingPolicy",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/uploads-file/media/20260731_122336_6-1-5,6,7.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Bank/RRB channel finance rules and operational conditions",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S021",
+      "title": "Lending Policy for Cooperative Banks/Societies",
+      "category": "06_LendingPolicy",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/uploads-file/media/20260731_122430_6-1-5,6,7.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Cooperative channel finance rules",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S022",
+      "title": "NBFC-MFI Lending Policy",
+      "category": "06_LendingPolicy",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/storage/uploads-file/media/20260731_122640_6-1-10.pdf",
+      "format": "PDF",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "NBFC-MFI channel rules; version shown on NSFDC site as Ver-3, 08.03.2018",
+      "data_quality_issues": [
+        "DQ-010"
+      ]
+    },
+    {
+      "id": "S023",
+      "title": "MoSJE Schemes Directory",
+      "category": "07_GovContext",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": null,
+      "url": "https://socialjustice.gov.in/schemes",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Official scheme universe for deciding what is in/out of scope",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S024",
+      "title": "NSFDC MoSJE Scheme Page",
+      "category": "07_GovContext",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": null,
+      "url": "https://socialjustice.gov.in/schemes/34",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Ministry-level description of NSFDC mandate and coverage",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S025",
+      "title": "PM-DAKSH",
+      "category": "07_GovContext",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": null,
+      "url": "https://socialjustice.gov.in/schemes/100",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Skill training, entrepreneurship development, eligibility and benefits",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S026",
+      "title": "PM-AJAY",
+      "category": "07_GovContext",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": null,
+      "url": "https://socialjustice.gov.in/schemes/104",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "SC economic empowerment, livelihood projects and convergence context",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S027",
+      "title": "SCDC Assistance Scheme",
+      "category": "07_GovContext",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": null,
+      "url": "https://socialjustice.gov.in/schemes/36",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "State SC Development Corporations, margin money/subsidy and credit linkage context",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S028",
+      "title": "PIB: Increase in provision of loans to SCs",
+      "category": "08_Evidence",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": null,
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2223171&lang=1&reg=3",
+      "format": "Gov release/pdf",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "2026 confirmation of NSFDC schemes, ₹5L income limit, ₹50L project/₹45L loan Term Loan, ELS ₹40L",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S029",
+      "title": "PIB: NSFDC National Performance",
+      "category": "08_Evidence",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": null,
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2222707&lang=2&reg=48",
+      "format": "Gov release/pdf",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Fund utilisation, state beneficiaries and reasons for under-utilisation",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S030",
+      "title": "PIB: NSFDC FY2025-26 record performance",
+      "category": "08_Evidence",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": null,
+      "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2250876&lang=2&reg=48",
+      "format": "Gov release/pdf",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "₹775.26 crore disbursement and 59,002 beneficiaries in FY2025-26",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S031",
+      "title": "PIB: Impact evaluation of NSFDC credit schemes",
+      "category": "08_Evidence",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": null,
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2284193&lang=1&reg=48",
+      "format": "Gov release/pdf",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "External impact evaluation covering 5,480 beneficiaries across 11 States/UTs",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S032",
+      "title": "NSFDC Annual Reports",
+      "category": "09_Documents",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/annual-reports",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "36th Annual Report 2024-25 and previous reports",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S033",
+      "title": "NSFDC RTI / Public Authority disclosures",
+      "category": "09_Documents",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/rti",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Functions, services, decision/process context and disclosure framework",
+      "data_quality_issues": []
+    },
+    {
+      "id": "S034",
+      "title": "NSFDC Success Stories",
+      "category": "10_Stories",
+      "authority_level": "PRIMARY_CURRENT",
+      "authority_level_conflict": null,
+      "publisher": "NSFDC",
+      "url": "https://nsfdc.nic.in/success-stories/ramu-s-o-sh-purnmasi",
+      "format": "Web page",
+      "publication_date": null,
+      "retrieved_date": null,
+      "notes": "Real beneficiary journey and loan-use example for UX/demo personas",
+      "data_quality_issues": []
+    }
+  ]
+}

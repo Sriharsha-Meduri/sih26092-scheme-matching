@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "financial_parameter.schema.json",
+  "title": "Canonical Financial Parameter",
+  "type": "object",
+  "required": [
+    "id", "scheme_id", "parameter", "parameter_label",
+    "value", "value_original", "type", "unit", "condition",
+    "derived", "definition", "sources", "data_quality_issues", "notes"
+  ],
+  "properties": {
+    "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+    "scheme_id": { "type": "string" },
+    "parameter": {
+      "type": "string",
+      "enum": [
+        "project_cost_min", "project_cost_max",
+        "loan_amount_min", "loan_amount_max",
+        "financing_percent", "nsfdc_interest_rate", "beneficiary_interest_rate",
+        "repayment_period_years", "moratorium_months", "installment_frequency",
+        "loan_cap_formula"
+      ]
+    },
+    "parameter_label": { "type": "string" },
+    "value": { "$ref": "kb_defs.schema.json#/$defs/scalar_or_conditional" },
+    "value_original": { "type": ["string", "null"], "description": "Exact original representation from the source, verbatim." },
+    "type": { "type": "string", "enum": ["integer", "number", "string", "object", "conditional", "formula"] },
+    "unit": { "type": ["string", "null"] },
+    "condition": { "oneOf": [ { "type": "null" }, { "$ref": "kb_defs.schema.json#/$defs/conditional_value" } ], "description": "Non-null only when the parameter's value depends on a condition." },
+    "derived": { "$ref": "kb_defs.schema.json#/$defs/derived_marker" },
+    "definition": { "type": ["string", "null"], "description": "Free-text definition/semantics of the parameter as expressed in sources." },
+    "sources": { "$ref": "kb_defs.schema.json#/$defs/source_ref" },
+    "data_quality_issues": { "$ref": "kb_defs.schema.json#/$defs/source_ref" },
+    "notes": { "type": ["string", "null"] }
+  }
+}

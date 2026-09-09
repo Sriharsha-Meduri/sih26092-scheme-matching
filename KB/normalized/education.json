@@ -1,0 +1,396 @@
+{
+  "entity": "education",
+  "education_eligibility": {
+    "scheme_id": "NSFDC-ELS",
+    "summary": "Eligible Scheduled Caste student; annual family income <= Rs 5,00,000 (rural and urban, effective 2026-01-07 per E002); pursuing a regular full-time professional/technical course from the NSFDC covered-course list (S001), in India or abroad. Loan: lesser of Rs 40 lakh or 90% of course fee. All course-level expectations beyond the covered list are NOT_SPECIFIED.",
+    "general_eligibility": [
+      {
+        "rule_id": "E001",
+        "field": "community",
+        "operator": "==",
+        "value": "Scheduled Caste (SC)",
+        "notes": null
+      },
+      {
+        "rule_id": "E002",
+        "field": "annual_family_income",
+        "operator": "<=",
+        "value": 500000,
+        "notes": "effective 2026-01-07"
+      },
+      {
+        "rule_id": "E003",
+        "field": "caste_certificate",
+        "operator": "EXISTS",
+        "value": "Valid certificate from competent authority",
+        "notes": null
+      },
+      {
+        "rule_id": null,
+        "field": "course_family",
+        "operator": "IN",
+        "value": "nsfdc_els_course_families",
+        "notes": "Course must come from the NSFDC covered list (S001)."
+      }
+    ],
+    "sources": [
+      "S001",
+      "S003"
+    ],
+    "data_quality_issues": []
+  },
+  "course_families": [
+    {
+      "id": "CF-001",
+      "family": "Engineering",
+      "raw_text": "Engineering (Diploma / B.Tech / B.E / M.Tech / M.E)",
+      "levels": [
+        "Diploma",
+        "B.Tech",
+        "B.E",
+        "M.Tech",
+        "M.E"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-002",
+      "family": "Architecture",
+      "raw_text": "Architecture (B.Arch / M.Arch)",
+      "levels": [
+        "B.Arch",
+        "M.Arch"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-003",
+      "family": "Medical",
+      "raw_text": "Medical (MBBS / MD / MS)",
+      "levels": [
+        "MBBS",
+        "MD",
+        "MS"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-004",
+      "family": "Biotechnology / Microbiology / Clinical Technology",
+      "raw_text": "Biotechnology / Microbiology / Clinical Technology",
+      "levels": [],
+      "level_derived": false,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-005",
+      "family": "Pharmacy",
+      "raw_text": "Pharmacy (B.Pharma / M.Pharma)",
+      "levels": [
+        "B.Pharma",
+        "M.Pharma"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-006",
+      "family": "Dental",
+      "raw_text": "Dental (BDS / MDS)",
+      "levels": [
+        "BDS",
+        "MDS"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-007",
+      "family": "Physiotherapy",
+      "raw_text": "Physiotherapy (B.Sc / M.Sc)",
+      "levels": [
+        "B.Sc",
+        "M.Sc"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-008",
+      "family": "Pathology",
+      "raw_text": "Pathology (B.Sc / M.Sc)",
+      "levels": [
+        "B.Sc",
+        "M.Sc"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-009",
+      "family": "Nursing",
+      "raw_text": "Nursing (B.Sc / M.Sc)",
+      "levels": [
+        "B.Sc",
+        "M.Sc"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-010",
+      "family": "Information Technology",
+      "raw_text": "Information Technology (BCA / MCA)",
+      "levels": [
+        "BCA",
+        "MCA"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-011",
+      "family": "Management",
+      "raw_text": "Management (BBA / MBA)",
+      "levels": [
+        "BBA",
+        "MBA"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-012",
+      "family": "Hotel Management & Catering Technology",
+      "raw_text": "Hotel Management & Catering Technology",
+      "levels": [],
+      "level_derived": false,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-013",
+      "family": "Law",
+      "raw_text": "Law (LLB / LLM)",
+      "levels": [
+        "LLB",
+        "LLM"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-014",
+      "family": "Education",
+      "raw_text": "Education (CT / NTT / B.Ed / M.Ed)",
+      "levels": [
+        "CT",
+        "NTT",
+        "B.Ed",
+        "M.Ed"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-015",
+      "family": "Physical Education",
+      "raw_text": "Physical Education (C.PEd / B.PEd / M.PEd)",
+      "levels": [
+        "C.PEd",
+        "B.PEd",
+        "M.PEd"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-016",
+      "family": "Journalism & Mass Communication",
+      "raw_text": "Journalism & Mass Communication",
+      "levels": [],
+      "level_derived": false,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-017",
+      "family": "Geriatric Care",
+      "raw_text": "Geriatric Care",
+      "levels": [],
+      "level_derived": false,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-018",
+      "family": "Midwifery",
+      "raw_text": "Midwifery",
+      "levels": [],
+      "level_derived": false,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-019",
+      "family": "Laboratory Technician",
+      "raw_text": "Laboratory Technician",
+      "levels": [],
+      "level_derived": false,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-020",
+      "family": "Chartered Accountancy",
+      "raw_text": "Chartered Accountancy (CA)",
+      "levels": [
+        "CA"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-021",
+      "family": "Cost Accountancy",
+      "raw_text": "Cost Accountancy (ICWA)",
+      "levels": [
+        "ICWA"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-022",
+      "family": "Company Secretaryship",
+      "raw_text": "Company Secretaryship (CS)",
+      "levels": [
+        "CS"
+      ],
+      "level_derived": true,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-023",
+      "family": "Actuarial Sciences",
+      "raw_text": "Actuarial Sciences",
+      "levels": [],
+      "level_derived": false,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-024",
+      "family": "AMIE / Institute of Electronics & Telecommunication",
+      "raw_text": "AMIE / Institute of Electronics & Telecommunication",
+      "levels": [],
+      "level_derived": false,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    },
+    {
+      "id": "CF-025",
+      "family": "Higher Education: Doctoral Studies leading to M.Phil / PhD from recognized institutions",
+      "raw_text": "Higher Education: Doctoral Studies leading to M.Phil / PhD from recognized institutions",
+      "levels": [],
+      "level_derived": false,
+      "coverage_status": "LISTED_IN_COVERED_COURSES",
+      "notes": null,
+      "sources": [
+        "S001"
+      ]
+    }
+  ]
+}

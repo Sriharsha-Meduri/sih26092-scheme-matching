@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "partner.schema.json",
+  "title": "Partner master schema (ingestion stub)",
+  "type": "object",
+  "required": [
+    "entity", "ingestion_status", "records", "gap", "registered_sources",
+    "routing_status"
+  ],
+  "properties": {
+    "entity": { "const": "partner" },
+    "ingestion_status": { "type": "string", "enum": ["NOT_INGESTED", "INGESTED", "PARTIAL"] },
+    "records": { "type": "array", "items": {
+      "type": "object",
+      "required": ["id", "name", "type", "availability", "sources"],
+      "properties": {
+        "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+        "name": { "type": ["string", "null"] },
+        "type": { "type": "string", "enum": ["SCA", "STATE_OFFICE", "PSB", "SFB", "CO_OP", "OTHER"] },
+        "availability": { "$ref": "kb_defs.schema.json#/$defs/availability" },
+        "sources": { "$ref": "kb_defs.schema.json#/$defs/source_ref" }
+      }
+    } },
+    "gap": {
+      "type": "object",
+      "required": ["description", "reason", "required_action_gate"],
+      "properties": {
+        "description": { "type": "string" },
+        "reason": { "type": "string" },
+        "required_action_gate": { "type": "string" }
+      }
+    },
+    "registered_sources": { "type": "array", "items": { "type": "string" } },
+    "routing_status": { "type": "string", "description": "Partner routing logic is NOT part of M1 (Developer 2)." }
+  }
+}

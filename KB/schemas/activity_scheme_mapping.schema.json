@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "activity_scheme_mapping.schema.json",
+  "title": "Activity <-> Scheme eligibility mapping",
+  "description": "Never auto-assume. Every mapping carries a status and evidence. Sector-level mappings propagate to their activities ONLY as UNVERIFIED.",
+  "type": "object",
+  "required": ["entity", "policy", "sector_mappings", "activity_mappings"],
+  "properties": {
+    "entity": { "const": "activity_scheme_mapping" },
+    "policy": {
+      "type": "object",
+      "required": ["derivation_note", "verification_note"],
+      "properties": {
+        "derivation_note": { "type": "string" },
+        "verification_note": { "type": "string" }
+      }
+    },
+    "sector_mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sector_id", "activity_count", "scheme_ids", "status", "evidence", "derived", "notes"],
+        "properties": {
+          "sector_id": { "type": "string" },
+          "activity_count": { "type": "integer" },
+          "scheme_ids": { "type": "array", "items": { "type": "string" } },
+          "status": { "type": "string", "enum": ["VERIFIED", "UNVERIFIED", "NOT_SUPPORTED", "CONFLICTED"] },
+          "evidence": { "$ref": "kb_defs.schema.json#/$defs/source_ref" },
+          "derived": { "$ref": "kb_defs.schema.json#/$defs/derived_marker" },
+          "notes": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "activity_mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["activity_id", "scheme_ids", "inherit_sector", "status", "evidence", "derived", "notes"],
+        "properties": {
+          "activity_id": { "type": "string" },
+          "scheme_ids": { "type": "array", "items": { "type": "string" } },
+          "inherit_sector": { "type": "boolean", "description": "true = mapping inherited (UNVERIFIED) from sector-level policy, not individually verified." },
+          "status": { "type": "string", "enum": ["VERIFIED", "UNVERIFIED", "NOT_SUPPORTED", "CONFLICTED"] },
+          "evidence": { "$ref": "kb_defs.schema.json#/$defs/source_ref" },
+          "derived": { "$ref": "kb_defs.schema.json#/$defs/derived_marker" },
+          "notes": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

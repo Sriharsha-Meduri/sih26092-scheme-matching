@@ -1,0 +1,415 @@
+{
+  "entity": "scheme",
+  "count": 5,
+  "records": [
+    {
+      "id": "NSFDC-MFS",
+      "scheme_name": "Micro Finance Scheme (MFS)",
+      "short_name": "MFS",
+      "scheme_type": "Income-generating / micro-credit",
+      "purpose": "Micro-credit for small business activities",
+      "cost_bounds": {
+        "min": null,
+        "min_inclusive": null,
+        "max": 140000,
+        "max_inclusive": null,
+        "availability": "PARTIAL"
+      },
+      "loan_bounds": {
+        "min": null,
+        "max": 125000,
+        "availability": "PARTIAL"
+      },
+      "financing_percent": 90,
+      "rates": {
+        "nsfdc": 2.5,
+        "beneficiary": 6.5
+      },
+      "repayment": 3,
+      "moratorium": 3,
+      "installment_frequency": "Quarterly",
+      "channel_types": [
+        "State Channelizing Agencies (SCAs)",
+        "Channelizing Agencies (CAs)"
+      ],
+      "target_group": "Eligible Scheduled Caste persons",
+      "application_mode": "PM-SURAJ online portal or offline through SCA/CA",
+      "status": null,
+      "status_assumption": {
+        "assumed_status": "ACTIVE_ASSUMED",
+        "derived": true,
+        "basis": "Scheme listed as current NSFDC scheme on S001 (retrieved 2026-09-08); seed has no explicit status field."
+      },
+      "education": {
+        "is_education_scheme": false,
+        "course_family_ids": null,
+        "eligibility_status": "NOT_SPECIFIED"
+      },
+      "notes": "NSFDC charges 2.5% to SCAs/CAs, which in turn charge 6.5% to beneficiaries.",
+      "derived_fields": [
+        "status_assumption",
+        "cost_bounds",
+        "loan_bounds",
+        "short_name"
+      ],
+      "data_quality_issues": [],
+      "sources": [
+        "S001",
+        "S002"
+      ]
+    },
+    {
+      "id": "NSFDC-TL",
+      "scheme_name": "Term Loan (TL)",
+      "short_name": "TL",
+      "scheme_type": "Income-generating / term finance",
+      "purpose": "Larger income-generating projects",
+      "cost_bounds": {
+        "min": 140000,
+        "min_inclusive": false,
+        "max": 5000000,
+        "max_inclusive": null,
+        "availability": "PARTIAL"
+      },
+      "loan_bounds": {
+        "min": null,
+        "max": 4500000,
+        "availability": "PARTIAL"
+      },
+      "financing_percent": 90,
+      "rates": {
+        "nsfdc": 4,
+        "beneficiary": 8
+      },
+      "repayment": 7,
+      "moratorium": {
+        "type": "conditional",
+        "variable": "activity_category",
+        "branches": [
+          {
+            "when": {
+              "IN": [
+                "Plantation",
+                "Construction"
+              ]
+            },
+            "value": 12,
+            "note": "Scheme notes: '12-month moratorium for plantation and construction activities.' Corroborated by Excel Current Scheme Snapshot (TL row)."
+          },
+          {
+            "when": {
+              "NOT_IN": [
+                "Plantation",
+                "Construction"
+              ]
+            },
+            "value": 6,
+            "note": "Default per current scheme page (S001) and Excel Snapshot."
+          }
+        ],
+        "note": "Normalized from moratorium_months=6 plus free-text notes."
+      },
+      "installment_frequency": "Quarterly",
+      "channel_types": [
+        "State Channelizing Agencies (SCAs)",
+        "Channelizing Agencies (CAs)"
+      ],
+      "target_group": "Eligible Scheduled Caste persons",
+      "application_mode": "PM-SURAJ online portal or offline through SCA/CA",
+      "status": null,
+      "status_assumption": {
+        "assumed_status": "ACTIVE_ASSUMED",
+        "derived": true,
+        "basis": "Scheme listed as current NSFDC scheme on S001 (retrieved 2026-09-08); seed has no explicit status field."
+      },
+      "education": {
+        "is_education_scheme": false,
+        "course_family_ids": null,
+        "eligibility_status": "NOT_SPECIFIED"
+      },
+      "notes": "12-month moratorium for plantation and construction activities. NSFDC charges 4% to SCAs/CAs, which in turn charge 8% to beneficiaries.",
+      "derived_fields": [
+        "status_assumption",
+        "cost_bounds",
+        "loan_bounds",
+        "short_name",
+        "moratorium"
+      ],
+      "data_quality_issues": [
+        "DQ-001"
+      ],
+      "sources": [
+        "S001",
+        "S002"
+      ]
+    },
+    {
+      "id": "NSFDC-AMY",
+      "scheme_name": "Aajeevika Micro-Finance Yojana (AMY)",
+      "short_name": "AMY",
+      "scheme_type": "Income-generating / micro-finance",
+      "purpose": "Prompt and need-based micro-finance for small/micro business activities",
+      "cost_bounds": {
+        "min": null,
+        "min_inclusive": null,
+        "max": 140000,
+        "max_inclusive": null,
+        "availability": "PARTIAL"
+      },
+      "loan_bounds": {
+        "min": null,
+        "max": 125000,
+        "availability": "PARTIAL"
+      },
+      "financing_percent": 90,
+      "rates": {
+        "nsfdc": 5,
+        "beneficiary": 15
+      },
+      "repayment": 3,
+      "moratorium": 3,
+      "installment_frequency": "Quarterly",
+      "channel_types": [
+        "Selected NBFC-MFIs"
+      ],
+      "target_group": "Eligible Scheduled Caste persons",
+      "application_mode": "Through applicable channel partner / PM-SURAJ route",
+      "status": null,
+      "status_assumption": {
+        "assumed_status": "ACTIVE_ASSUMED",
+        "derived": true,
+        "basis": "Scheme listed as current NSFDC scheme on S001 (retrieved 2026-09-08); seed has no explicit status field."
+      },
+      "education": {
+        "is_education_scheme": false,
+        "course_family_ids": null,
+        "eligibility_status": "NOT_SPECIFIED"
+      },
+      "notes": "NSFDC charges 5% to NBFC-MFIs, which in turn charge 15% to beneficiaries.",
+      "derived_fields": [
+        "status_assumption",
+        "cost_bounds",
+        "loan_bounds",
+        "short_name"
+      ],
+      "data_quality_issues": [],
+      "sources": [
+        "S001",
+        "S002"
+      ]
+    },
+    {
+      "id": "NSFDC-UNY",
+      "scheme_name": "Udyam Nidhi Yojana (UNY)",
+      "short_name": "UNY",
+      "scheme_type": "Income-generating / small-micro activity",
+      "purpose": "Small/micro activities",
+      "cost_bounds": {
+        "min": null,
+        "min_inclusive": null,
+        "max": 500000,
+        "max_inclusive": null,
+        "availability": "PARTIAL"
+      },
+      "loan_bounds": {
+        "min": null,
+        "max": 450000,
+        "availability": "PARTIAL"
+      },
+      "financing_percent": 90,
+      "rates": {
+        "nsfdc": 5,
+        "beneficiary": {
+          "type": "conditional",
+          "variable": "channel_type",
+          "branches": [
+            {
+              "when": {
+                "IN": [
+                  "Co-operative Banks",
+                  "Co-operative Societies"
+                ]
+              },
+              "value": 13,
+              "note": "13% through Cooperative Banks/Societies"
+            },
+            {
+              "when": {
+                "IN": [
+                  "Small Finance Banks (SFBs)"
+                ]
+              },
+              "value": 15,
+              "note": "15% through SFBs"
+            }
+          ],
+          "note": "Normalized from string '13 (Co-op Banks/Societies); 15 (SFBs)'. Value 13; 'Co-op Banks/Societies' is treated as a channel-group alias."
+        }
+      },
+      "repayment": 5,
+      "moratorium": 3,
+      "installment_frequency": "Quarterly or half-yearly",
+      "channel_types": [
+        "Co-operative Societies",
+        "Co-operative Banks",
+        "Small Finance Banks (SFBs)"
+      ],
+      "target_group": "Eligible Scheduled Caste persons",
+      "application_mode": "Through applicable channel partner / PM-SURAJ route",
+      "status": null,
+      "status_assumption": {
+        "assumed_status": "ACTIVE_ASSUMED",
+        "derived": true,
+        "basis": "Scheme listed as current NSFDC scheme on S001 (retrieved 2026-09-08); seed has no explicit status field."
+      },
+      "education": {
+        "is_education_scheme": false,
+        "course_family_ids": null,
+        "eligibility_status": "NOT_SPECIFIED"
+      },
+      "notes": "NSFDC charges 5%. Beneficiary rate is 13% through Cooperative Banks/Societies and 15% through SFBs.",
+      "derived_fields": [
+        "status_assumption",
+        "cost_bounds",
+        "loan_bounds",
+        "short_name",
+        "rates.beneficiary"
+      ],
+      "data_quality_issues": [
+        "DQ-002"
+      ],
+      "sources": [
+        "S001",
+        "S002"
+      ]
+    },
+    {
+      "id": "NSFDC-ELS",
+      "scheme_name": "Educational Loan Scheme (ELS)",
+      "short_name": "ELS",
+      "scheme_type": "Education loan",
+      "purpose": "Regular full-time professional/technical recognized courses in India or abroad",
+      "cost_bounds": {
+        "min": null,
+        "min_inclusive": null,
+        "max": 4000000,
+        "max_inclusive": null,
+        "availability": "PARTIAL"
+      },
+      "loan_bounds": {
+        "min": null,
+        "max": 4000000,
+        "availability": "PARTIAL"
+      },
+      "financing_percent": 90,
+      "rates": {
+        "nsfdc": 2.5,
+        "beneficiary": 6.5
+      },
+      "repayment": {
+        "type": "conditional",
+        "variable": "repayment_has_started",
+        "branches": [
+          {
+            "when": {
+              "==": false
+            },
+            "value": 12,
+            "note": "'12 if repayment has not started'"
+          },
+          {
+            "when": {
+              "==": true
+            },
+            "value": 10,
+            "note": "'10 if repayment has started'"
+          }
+        ],
+        "note": "Normalized from string '12 if repayment has not started; 10 if repayment has started'. Excel Snapshot corroborates 'Up to 10-12 years depending on status'."
+      },
+      "moratorium": {
+        "type": "conditional",
+        "variable": "repayment_has_started",
+        "branches": [
+          {
+            "when": {
+              "==": false
+            },
+            "value": "Course period + 1 year",
+            "note": "Course period is course-specific and NOT in the KB; requires user input or course-family assumption (M0 B7). "
+          },
+          {
+            "when": {
+              "==": true
+            },
+            "value": "up to 6 months",
+            "note": "'up to 6 months if repayment has started'"
+          }
+        ],
+        "note": "Normalized from string 'Course period + 1 year if repayment has not started; up to 6 months if repayment has started'."
+      },
+      "installment_frequency": null,
+      "channel_types": [
+        "Channelizing Agencies (CAs)",
+        "applicable banks under ELS arrangement"
+      ],
+      "target_group": "Eligible Scheduled Caste students",
+      "application_mode": "PM-SURAJ online portal or applicable channel",
+      "status": null,
+      "status_assumption": {
+        "assumed_status": "ACTIVE_ASSUMED",
+        "derived": true,
+        "basis": "Scheme listed as current NSFDC scheme on S001 (retrieved 2026-09-08); seed has no explicit status field."
+      },
+      "education": {
+        "is_education_scheme": true,
+        "course_family_ids": [
+          "CF-001",
+          "CF-002",
+          "CF-003",
+          "CF-004",
+          "CF-005",
+          "CF-006",
+          "CF-007",
+          "CF-008",
+          "CF-009",
+          "CF-010",
+          "CF-011",
+          "CF-012",
+          "CF-013",
+          "CF-014",
+          "CF-015",
+          "CF-016",
+          "CF-017",
+          "CF-018",
+          "CF-019",
+          "CF-020",
+          "CF-021",
+          "CF-022",
+          "CF-023",
+          "CF-024",
+          "CF-025"
+        ],
+        "eligibility_status": "PARTIAL"
+      },
+      "notes": "Maximum is ₹40 lakh or 90% of course fee, whichever is less.",
+      "derived_fields": [
+        "status_assumption",
+        "cost_bounds",
+        "loan_bounds",
+        "short_name",
+        "repayment",
+        "moratorium"
+      ],
+      "data_quality_issues": [
+        "DQ-005",
+        "DQ-003",
+        "DQ-004"
+      ],
+      "sources": [
+        "S001",
+        "S002"
+      ]
+    }
+  ]
+}

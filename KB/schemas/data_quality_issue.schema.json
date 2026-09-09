@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "data_quality_issue.schema.json",
+  "title": "Known data-quality issue / conflict flag",
+  "type": "object",
+  "required": [
+    "id", "category", "severity", "status", "description",
+    "affected", "source_conflict", "first_detected",
+    "recommended_resolution", "resolution_status"
+  ],
+  "properties": {
+    "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+    "category": {
+      "type": "string",
+      "enum": [
+        "FORMAT_HAZARD", "SCOPE_AMBIGUITY", "VALUE_SUSPICIOUS",
+        "INTERNAL_TENSION", "SOURCE_CONFLICT", "STRUCTURAL_GAP",
+        "MISSING_DATA", "CONDITIONAL_AMBIGUITY", "NOT_SPECIFIED"
+      ]
+    },
+    "severity": { "type": "string", "enum": ["ERROR", "WARNING", "INFO", "NEEDS_VERIFICATION"] },
+    "status": { "type": "string", "enum": ["OPEN", "FLAGGED", "RESOLVED", "DEFERRED"] },
+    "description": { "type": "string" },
+    "affected": { "type": "array", "items": { "type": "string" } },
+    "source_conflict": { "$ref": "kb_defs.schema.json#/$defs/derived_marker" },
+    "first_detected": { "type": "string", "enum": ["M0", "M1.1", "M1.2", "M1.3", "M1.4", "M1.5", "M1.6", "M1.7", "M1.8", "M1.9", "M1.10"] },
+    "recommended_resolution": { "type": ["string", "null"] },
+    "resolution_status": { "type": "string", "enum": ["HUMAN_DECISION_REQUIRED", "BY_DESIGN", "NOT_DEFINED"] }
+  }
+}

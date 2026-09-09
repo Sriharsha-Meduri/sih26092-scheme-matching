@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "sector.schema.json",
+  "title": "Canonical Activity Sector",
+  "type": "object",
+  "required": ["id", "name", "source_name", "activity_ids", "sources", "data_quality_issues"],
+  "properties": {
+    "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+    "name": { "type": "string", "description": "Cleaned display name." },
+    "source_name": { "type": "string", "description": "Original sector label from the source taxonomy (verbatim)." },
+    "activity_ids": { "type": "array", "items": { "type": "string" } },
+    "sources": { "$ref": "kb_defs.schema.json#/$defs/source_ref" },
+    "data_quality_issues": { "$ref": "kb_defs.schema.json#/$defs/source_ref" }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "entity": "document_requirement",
+  "records": [
+    {
+      "id": "DOC-001",
+      "document": "SC (Scheduled Caste) certificate from competent authority",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY",
+        "NSFDC-ELS"
+      ],
+      "rule_derived": true,
+      "mandatory": true,
+      "status": "VERIFIED",
+      "source": "S003",
+      "notes": "Derived from rule E003 (caste certificate required)."
+    }
+  ],
+  "gap_notes": "Exact per-scheme document checklists are NOT_SPECIFIED in the current corpus (DQ-011). Only the caste certificate is rule-verified. Any P1 checklist output must clearly mark other documents as indicative until confirmed (recommend: application forms S006 + M2 web verification)."
+}

@@ -1,0 +1,273 @@
+{
+  "note": "Golden fixtures (M1.11). Each fixture states an input and the expected KB verdict. Sources of truth for expected values: PRD section 24 scenarios + verified KB facts (rules E001-E006, financial bounds, activity mapping status). UNVERIFIED mapping constraints are reflected, never hidden.",
+  "records": [
+    {
+      "id": "G001",
+      "name": "PRD hero demo: tailoring entrepreneur (ranked NSFDC-TL)",
+      "scenario": "eligible",
+      "input": {
+        "community": "Scheduled Caste (SC)",
+        "annual_family_income": 350000,
+        "entity_type": "Individual",
+        "activity": "Tailoring",
+        "project_cost": 300000,
+        "caste_certificate": true
+      },
+      "expected": {
+        "eligible": true,
+        "scheme_ids": [
+          "NSFDC-TL",
+          "NSFDC-UNY"
+        ],
+        "status": "VERIFIED",
+        "notes": "PRD sec 24 hero: Rs 3L tailoring / Rs 3.5L income -> NSFDC-TL (PRD score 94; Ranking is PRD scoring, not a rule). KB rule facts: income <= 5L (E002), SC (E001); TL cost >1.4L and <=50L holds; UNY (max 5L) also matches as a rule matter. MFS/AMY excluded: cost > 1.4L cap. Activity verification: Tailoring IS in Service & Transport taxonomy; activity->scheme mapping remains UNVERIFIED (DQ-012) and must be surfaced as such in UI."
+      },
+      "basis": "PRD sec 24 hero scenario; E001/E002; TL cost bound (>1.4L, <=50L); Service & Transport taxonomy contains Tailoring (S004); mapping UNVERIFIED (DQ-012).",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G002",
+      "name": "Income boundary: exactly at the 5 lakh ceiling",
+      "scenario": "income_boundary",
+      "input": {
+        "community": "Scheduled Caste (SC)",
+        "annual_family_income": 500000,
+        "entity_type": "Individual",
+        "activity": "Tailoring",
+        "project_cost": 100000,
+        "caste_certificate": true
+      },
+      "expected": {
+        "eligible": true,
+        "scheme_ids": [
+          "NSFDC-MFS",
+          "NSFDC-AMY",
+          "NSFDC-UNY"
+        ],
+        "status": "VERIFIED",
+        "notes": "E002 operator is <=; exactly 5,00,000 passes. Project cost 1L: eligible under MFS/AMY (max 1.4L) and UNY (max 5L); TL requires > 1.4L and fails."
+      },
+      "basis": "E002 operator is <= (inclusive at 5,00,000); cost bounds MFS/AMY max 1.4L, UNY max 5L; TL exclusive lower bound excludes cost 1L.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G003",
+      "name": "Income boundary: one rupee above the ceiling",
+      "scenario": "ineligible",
+      "input": {
+        "community": "Scheduled Caste (SC)",
+        "annual_family_income": 500001,
+        "entity_type": "Individual",
+        "activity": "Tailoring",
+        "project_cost": 100000,
+        "caste_certificate": true
+      },
+      "expected": {
+        "eligible": false,
+        "scheme_ids": [],
+        "status": "VERIFIED",
+        "notes": "E002 strict: Rs 5,00,001 exceeds the Rs 5,00,000 ceiling -> all 5 core schemes ineligible."
+      },
+      "basis": "E002 strict: 5,00,001 exceeds ceiling; every core scheme fails.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G004",
+      "name": "Term Loan upper loan boundary",
+      "scenario": "loan_boundary",
+      "input": {
+        "community": "Scheduled Caste (SC)",
+        "annual_family_income": 200000,
+        "entity_type": "Individual",
+        "activity": "Brick Making",
+        "project_cost": 4000000,
+        "caste_certificate": true
+      },
+      "expected": {
+        "eligible": true,
+        "scheme_ids": [
+          "NSFDC-TL"
+        ],
+        "status": "VERIFIED",
+        "notes": "TL project cost 40L (max 50L). Loan = 90% finance = 36L (max 45L) -> passes. UNY excluded: cost > 5L cap. ELS excluded: not an education case."
+      },
+      "basis": "TL bounds: cost 40L (max 50L); loan = 90% x 40L = 36L <= 45L; UNY cost cap 5L excludes.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G005",
+      "name": "Term Loan exclusive lower bound",
+      "scenario": "loan_boundary",
+      "input": {
+        "community": "Scheduled Caste (SC)",
+        "annual_family_income": 200000,
+        "entity_type": "Individual",
+        "activity": "Bakery",
+        "project_cost": 140000,
+        "caste_certificate": true
+      },
+      "expected": {
+        "eligible": true,
+        "scheme_ids": [
+          "NSFDC-MFS",
+          "NSFDC-AMY",
+          "NSFDC-UNY"
+        ],
+        "status": "VERIFIED",
+        "notes": "Cost exactly 1.40L: TL is EXCLUDED (exclusive > 1.4L, DQ-001). MFS/AMY (max 1.4L, inclusive unknown) and UNY (max 5L) accept; boundary inclusivity of MFS/AMY max is PARTIAL and should present as such."
+      },
+      "basis": "TL lower bound exclusive (>1.4L) excludes cost exactly 1.4L (DQ-001); MFS/AMY Snapshot wording up to 1.4L supports inclusive; UNY max 5L.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G006",
+      "name": "Supported activity within multiple schemes",
+      "scenario": "multiple_match",
+      "input": {
+        "community": "Scheduled Caste (SC)",
+        "annual_family_income": 150000,
+        "entity_type": "Individual",
+        "activity": "Fisheries",
+        "project_cost": 100000,
+        "caste_certificate": true
+      },
+      "expected": {
+        "eligible": true,
+        "scheme_ids": [
+          "NSFDC-MFS",
+          "NSFDC-AMY",
+          "NSFDC-UNY"
+        ],
+        "status": "VERIFIED",
+        "notes": "Fisheries is in Agricultural & Allied taxonomy (S004). Three micro schemes accept 1L projects; scoring/ranking is PRD factor (not a rule) so all three appear as matches."
+      },
+      "basis": "Fisheries in Agricultural & Allied taxonomy (S004); micro schemes accept 1L projects; E002 passes.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G007",
+      "name": "Unsupported activity (not in taxonomy)",
+      "scenario": "activity_unsupported",
+      "input": {
+        "community": "Scheduled Caste (SC)",
+        "annual_family_income": 300000,
+        "entity_type": "Individual",
+        "activity": "Cinema Hall",
+        "project_cost": 2000000,
+        "caste_certificate": true
+      },
+      "expected": {
+        "eligible": null,
+        "scheme_ids": [],
+        "status": "NOT_SUPPORTED",
+        "notes": "'Cinema Hall' is not in the NSFDC Indicative Activities taxonomy (S004). No scheme can claim it is financed; eligibility status UNKNOWN (do not silently treat as eligible)."
+      },
+      "basis": "Cinema Hall not in Indicative Activities taxonomy (S004); KB cannot claim eligibility.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G008",
+      "name": "No matching scheme: non-SC applicant",
+      "scenario": "no_match",
+      "input": {
+        "community": "General (non-SC)",
+        "annual_family_income": 200000,
+        "entity_type": "Individual",
+        "activity": "Tailoring",
+        "project_cost": 200000,
+        "caste_certificate": false
+      },
+      "expected": {
+        "eligible": false,
+        "scheme_ids": [],
+        "status": "VERIFIED",
+        "notes": "E001 community must_be SC fails -> no core scheme applies. (NSFDC is exclusive to SC beneficiaries per mandate.)"
+      },
+      "basis": "E001 community must be SC; fails for all schemes.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G009",
+      "name": "Missing information: income not provided",
+      "scenario": "missing_information",
+      "input": {
+        "community": "Scheduled Caste (SC)",
+        "annual_family_income": null,
+        "entity_type": null,
+        "activity": "Tailoring",
+        "project_cost": 200000,
+        "caste_certificate": true
+      },
+      "expected": {
+        "eligible": null,
+        "scheme_ids": [],
+        "status": "UNVERIFIED",
+        "notes": "E002 cannot be evaluated without income. Engine MUST ask for income; it may not infer or assume a default."
+      },
+      "basis": "E002 not evaluable without annual_family_income; engine must ask, not assume.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G010",
+      "name": "Education: B.Tech student covered course",
+      "scenario": "education",
+      "input": {
+        "community": "Scheduled Caste (SC)",
+        "annual_family_income": 400000,
+        "course_family": "Engineering",
+        "course_fee": 3000000,
+        "caste_certificate": true,
+        "repayment_has_started": false
+      },
+      "expected": {
+        "eligible": true,
+        "scheme_ids": [
+          "NSFDC-ELS"
+        ],
+        "status": "VERIFIED",
+        "notes": "B.Tech is CF-001 Engineering (covered list S001). Income <= 5L. Cap = min(40L, 90% of 30L = 27L) = 27L. Repayment not started -> 12 years; moratorium = course period + 1 year (course period not in KB, user input needed)."
+      },
+      "basis": "CF-001 Engineering in ELS covered list (S001); ELS cap formula min(40L, 90% x 30L)=27L; E002 passes.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G011",
+      "name": "Education: course not in covered list",
+      "scenario": "education",
+      "input": {
+        "community": "Scheduled Caste (SC)",
+        "annual_family_income": 300000,
+        "entity_type": "Individual",
+        "course_family": "Astrology",
+        "project_cost": 10000000,
+        "course_fee": 1000000,
+        "caste_certificate": true,
+        "repayment_has_started": null
+      },
+      "expected": {
+        "eligible": false,
+        "scheme_ids": [],
+        "status": "VERIFIED",
+        "notes": "'Astrology' is not among the 25 ELS covered course families (education.json). ELS course-coverage check fails; do not fabricate coverage."
+      },
+      "basis": "Astrology not among 25 ELS covered families (education.json); ELS course-coverage check fails; income schemes excluded by project cost 1 crore.",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "G012",
+      "name": "Conditional value: UNY beneficiary rate by channel",
+      "scenario": "conditional_value",
+      "input": {
+        "unused": true
+      },
+      "expected": {
+        "eligible": null,
+        "scheme_ids": [],
+        "status": "VERIFIED",
+        "notes": "Oracle unit check, not an eligibility case: FP-NSFDC-UNY-008 beneficiary_interest_rate conditional resolves 13 for Co-op channels and 15 for Small Finance Banks (DQ-002). See test assertions."
+      },
+      "basis": "Conditional-value oracle checks (FP-NSFDC-UNY-007 13/15, FP-NSFDC-ELS-008 12/10, FP-NSFDC-ELS-009 moratorium, FP-NSFDC-TL-009 6/12).",
+      "status": "VERIFIED"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "scheme.schema.json",
+  "title": "Canonical NSFDC Scheme",
+  "type": "object",
+  "required": [
+    "id", "scheme_name", "short_name", "scheme_type", "purpose",
+    "cost_bounds", "loan_bounds", "financing_percent", "rates",
+    "repayment", "moratorium", "installment_frequency", "channel_types",
+    "target_group", "application_mode", "status", "status_assumption",
+    "education", "notes", "derived_fields", "data_quality_issues", "sources"
+  ],
+  "properties": {
+    "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+    "scheme_name": { "type": "string" },
+    "short_name": { "type": "string" },
+    "scheme_type": { "type": "string" },
+    "purpose": { "type": "string" },
+    "cost_bounds": {
+      "type": "object",
+      "required": ["min", "min_inclusive", "max", "max_inclusive", "availability"],
+      "properties": {
+        "min": { "type": ["number", "null"], "minimum": 0, "description": "INR. null when source does not specify a lower bound." },
+        "min_inclusive": { "type": ["boolean", "null"], "description": "Whether the min boundary is inclusive. null only when min is null." },
+        "max": { "type": ["number", "null"], "minimum": 0 },
+        "max_inclusive": { "type": ["boolean", "null"] },
+        "availability": { "$ref": "kb_defs.schema.json#/$defs/availability" }
+      }
+    },
+    "loan_bounds": {
+      "type": "object",
+      "required": ["min", "max", "availability"],
+      "properties": {
+        "min": { "type": ["number", "null"], "description": "INR; loan floor where stated, else null." },
+        "max": { "type": ["number", "null"], "minimum": 0 },
+        "availability": { "$ref": "kb_defs.schema.json#/$defs/availability" }
+      }
+    },
+    "financing_percent": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+    "rates": {
+      "type": "object",
+      "required": ["nsfdc", "beneficiary"],
+      "properties": {
+        "nsfdc": { "$ref": "kb_defs.schema.json#/$defs/scalar_or_conditional", "description": "Rate NSFDC charges the channel (percent per annum)." },
+        "beneficiary": { "$ref": "kb_defs.schema.json#/$defs/scalar_or_conditional", "description": "Rate charged to beneficiary (percent per annum)." }
+      }
+    },
+    "repayment": { "$ref": "kb_defs.schema.json#/$defs/scalar_or_conditional", "description": "Repayment period in years (conditional for ELS)." },
+    "moratorium": { "$ref": "kb_defs.schema.json#/$defs/scalar_or_conditional", "description": "Moratorium in months (conditional for ELS; TL 12-month case expressed in notes)." },
+    "installment_frequency": { "type": ["string", "null"] },
+    "channel_types": { "type": "array", "items": { "type": "string" } },
+    "target_group": { "type": ["string", "null"] },
+    "application_mode": { "type": ["string", "null"] },
+    "status": { "type": ["string", "null"], "description": "null because source provides no explicit status field." },
+    "status_assumption": {
+      "type": ["object", "null"],
+      "properties": {
+        "assumed_status": { "type": "string" },
+        "derived": { "type": "boolean" },
+        "basis": { "type": "string" }
+      }
+    },
+    "education": {
+      "type": "object",
+      "required": ["is_education_scheme", "course_family_ids", "eligibility_status"],
+      "properties": {
+        "is_education_scheme": { "type": "boolean" },
+        "course_family_ids": { "type": ["array", "null"], "items": { "type": "string" } },
+        "eligibility_status": { "$ref": "kb_defs.schema.json#/$defs/availability" }
+      }
+    },
+    "notes": { "type": ["string", "null"], "description": "Preserved original free-text notes verbatim." },
+    "derived_fields": { "type": "array", "items": { "type": "string" }, "description": "Field names that carry DERIVED/ASSUMED content rather than directly stated facts." },
+    "data_quality_issues": { "$ref": "kb_defs.schema.json#/$defs/source_ref" },
+    "sources": { "$ref": "kb_defs.schema.json#/$defs/source_ref" }
+  }
+}
