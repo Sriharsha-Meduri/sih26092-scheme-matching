@@ -1,0 +1,60 @@
+{
+  "kb_name": "SIH26092 Knowledge Base",
+  "kb_version": "1.0.0",
+  "generated_by": "SIH26092 M1 · KB/tools/build_kb.py",
+  "generated_on": "2026-09-09",
+  "schema_version": "1.0.0",
+  "schema_location": "KB/schemas/",
+  "source_snapshots": [
+    {
+      "file": "Master_DB.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "status": "UNCHANGED"
+    },
+    {
+      "file": "SIH26092_Knowledge_Base_Source_Register.xlsx",
+      "sha256": "3e89c67beba75672b5031b3d565d48e6efa1ec19379f8390d2198ee5105c84d1",
+      "size_bytes": 10776,
+      "status": "UNCHANGED"
+    },
+    {
+      "file": "SIH26092_Scheme_Master_KB.json",
+      "sha256": "e6045072da5068c1cd5f0d2add4c71a30cdf1a7cbc355f24427de35626b94789",
+      "size_bytes": 13546,
+      "status": "UNCHANGED"
+    }
+  ],
+  "entities": {
+    "schemes": "schemes.json",
+    "eligibility_rules": "eligibility_rules.json",
+    "financial_parameters": "financial_parameters.json",
+    "sectors": "sectors.json",
+    "activities": "activities.json",
+    "activity_scheme_mappings": "activity_scheme_mappings.json",
+    "education": "education.json",
+    "document_requirements": "document_requirements.json",
+    "sources": "sources.json",
+    "provenance": "provenance.json",
+    "partners": "partners.json",
+    "data_quality_issues": "data_quality_issues.json",
+    "golden_fixtures": "golden_fixtures.json"
+  },
+  "stats": {
+    "schemes": 5,
+    "eligibility_rules": 7,
+    "financial_parameters": 51,
+    "sectors": 3,
+    "activities_unique": 146,
+    "activities_raw_entries": 148,
+    "course_families": 25,
+    "sources": 34,
+    "sources_excel_rows": 33,
+    "activity_mappings": 146,
+    "data_quality_issues": 13,
+    "document_requirements": 1,
+    "partners_ingested": 0,
+    "golden_fixtures": 12
+  },
+  "notes": "Canonical normalized KB. All content is either (a) directly sourced from the raw artifacts or (b) explicitly DErived with derived=true and a basis. No government facts were invented. Activity/scheme mappings are UNVERIFIED by design (see activity_scheme_mappings.json policy). Partners not ingested (see partners.json gap). See docs/M1_KNOWLEDGE_BASE.md."
+}

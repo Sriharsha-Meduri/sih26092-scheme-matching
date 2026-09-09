@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "eligibility_rule.schema.json",
+  "title": "Canonical Eligibility Rule",
+  "type": "object",
+  "required": [
+    "id", "name", "scope", "field", "operator", "raw_operator",
+    "value", "unit", "condition_group", "explanation", "original_explanation",
+    "priority", "effective_from", "effective_until", "sources",
+    "data_quality_issues", "notes"
+  ],
+  "properties": {
+    "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+    "name": { "type": "string" },
+    "scope": {
+      "type": "object",
+      "required": ["type", "schemes", "scheme_group", "scope_derived", "notes"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["ALL_CORE_SCHEMES", "SCHEME_GROUP", "SCHEME_LIST", "EXTERNAL_DOMAIN"]
+        },
+        "schemes": { "type": ["array", "null"], "items": { "type": "string" } },
+        "scheme_group": { "type": ["string", "null"], "enum": ["income_generating", null] },
+        "scope_derived": { "type": "boolean", "description": "true when the scheme scope was INTERPRETED, not explicitly stated in the source." },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "field": { "type": "string", "description": "Canonical user-profile field the rule tests." },
+    "operator": {
+      "type": "string",
+      "enum": ["==", "!=", "<", "<=", ">", ">=", "IN", "NOT_IN", "EXISTS", "NO_CEILING"],
+      "description": "Machine operator. Mapped from the source's natural-language operator; the raw form is preserved in raw_operator."
+    },
+    "raw_operator": { "type": "string", "description": "Original operator wording from the source, e.g. 'must_be', 'less_than_or_equal'." },
+    "value": { "$ref": "kb_defs.schema.json#/$defs/scalar_or_conditional" },
+    "unit": { "type": ["string", "null"] },
+    "condition_group": { "type": ["string", "null"], "description": "Grouping key for AND/OR composition when defined; null when the rule stands alone." },
+    "explanation": { "type": "string" },
+    "original_explanation": { "type": "string" },
+    "priority": { "type": ["integer", "null"], "description": "Evaluation priority (PRD field). source does not define it -> null." },
+    "effective_from": { "type": ["string", "null"], "format": "date" },
+    "effective_until": { "type": ["string", "null"], "format": "date" },
+    "sources": { "$ref": "kb_defs.schema.json#/$defs/source_ref" },
+    "data_quality_issues": { "$ref": "kb_defs.schema.json#/$defs/source_ref" },
+    "notes": { "type": ["string", "null"] }
+  }
+}

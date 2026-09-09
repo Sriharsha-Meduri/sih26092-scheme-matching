@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "index.schema.json",
+  "title": "KB index (envelope)",
+  "type": "object",
+  "required": [
+    "kb_name", "kb_version", "generated_by", "generated_on",
+    "schema_version", "schema_location", "source_snapshots",
+    "entities", "stats", "notes"
+  ],
+  "properties": {
+    "kb_name": { "type": "string" },
+    "kb_version": { "type": "string" },
+    "generated_by": { "type": "string" },
+    "generated_on": { "type": "string", "format": "date" },
+    "schema_version": { "type": "string" },
+    "schema_location": { "type": "string" },
+    "source_snapshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["file", "sha256", "size_bytes", "status"],
+        "properties": {
+          "file": { "type": "string" },
+          "sha256": { "type": "string" },
+          "size_bytes": { "type": "integer" },
+          "status": { "type": "string", "enum": ["UNCHANGED", "MISMATCH"] }
+        }
+      }
+    },
+    "entities": { "type": "object", "additionalProperties": { "type": "string" } },
+    "stats": { "type": "object" },
+    "notes": { "type": "string" }
+  }
+}

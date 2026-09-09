@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "provenance.schema.json",
+  "title": "Provenance edges",
+  "type": "object",
+  "required": ["entity", "record_level", "field_level"],
+  "properties": {
+    "entity": { "const": "provenance" },
+    "record_level": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["entity_type", "entity_id", "source_id", "role", "note"],
+        "properties": {
+          "entity_type": { "type": "string" },
+          "entity_id": { "type": "string" },
+          "source_id": { "type": "string" },
+          "role": { "type": "string", "enum": ["PRIMARY", "CORROBORATING", "CONFLICTING"] },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "field_level": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["entity_type", "entity_id", "field", "source_id", "role", "derived", "note"],
+        "properties": {
+          "entity_type": { "type": "string" },
+          "entity_id": { "type": "string" },
+          "field": { "type": "string", "description": "Dotted path to the field, e.g. 'cost_bounds.max'." },
+          "source_id": { "type": "string" },
+          "role": { "type": "string", "enum": ["PRIMARY", "CORROBORATING", "CONFLICTING"] },
+          "derived": { "$ref": "kb_defs.schema.json#/$defs/derived_marker" },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

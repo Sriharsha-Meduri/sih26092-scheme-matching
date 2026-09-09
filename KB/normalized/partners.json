@@ -1,0 +1,27 @@
+{
+  "entity": "partner",
+  "ingestion_status": "NOT_INGESTED",
+  "records": [],
+  "gap": {
+    "description": "Partner master data (SCAs, PSBs, RRBs, NBFC-MFIs, SFBs, Cooperative Societies, Other/SIDBI) has NOT been parsed into the KB. Only the PDF URLs and coverage notes are registered.",
+    "reason": "Partner PDFs are referenced in the Source Register but not downloaded/parsed. Content must not be fabricated.",
+    "required_action_gate": "Decide: approve official-PDF download into data/ + parse partner master (recommended next milestone)."
+  },
+  "registered_sources": [
+    "S007",
+    "S010",
+    "S011",
+    "S012",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "S018",
+    "S019",
+    "S020",
+    "S021",
+    "S022"
+  ],
+  "routing_status": "NOT_PART_OF_M1 (Developer 2: partner routing uses this KBs partner data when available)."
+}

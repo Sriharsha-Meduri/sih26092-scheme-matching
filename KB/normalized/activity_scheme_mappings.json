@@ -1,0 +1,2544 @@
+{
+  "entity": "activity_scheme_mapping",
+  "policy": {
+    "derivation_note": "NSFDC publishes ONE indicative activity taxonomy (S004) covering its credit schemes. The corpus does NOT state per-activity or per-scheme eligibility. Sector/activity membership is therefore mapped to the four income-generating schemes (MFS, TL, AMY, UNY) as UNVERIFIED, inherit-from-sector relationships. This is an ASSUMPTION, not a verified fact.",
+    "verification_note": "Per-activity verification is a follow-on task (M2/Gemini + scheme documents). Until then, the Intelligence Engine must present activity-based eligibility as provisional and UNVERIFIED (PRD 40/25/20/15: Activity Match weight must not silently turn into a hard eligibility claim)."
+  },
+  "sector_mappings": [
+    {
+      "sector_id": "SECTOR-AGR",
+      "activity_count": 20,
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Sector treated as indicative coverage for income-generating schemes; not a verified per-activity eligibility statement."
+    },
+    {
+      "sector_id": "SECTOR-SII",
+      "activity_count": 51,
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Sector treated as indicative coverage for income-generating schemes; not a verified per-activity eligibility statement."
+    },
+    {
+      "sector_id": "SECTOR-STT",
+      "activity_count": 77,
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Sector treated as indicative coverage for income-generating schemes; not a verified per-activity eligibility statement."
+    }
+  ],
+  "activity_mappings": [
+    {
+      "activity_id": "ACT-001",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-002",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-003",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-004",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-005",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-006",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-007",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-008",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-009",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-010",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-011",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-012",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-013",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-014",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-015",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-016",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-017",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-018",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-019",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-020",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-021",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-022",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-023",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-024",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-025",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-026",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-027",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-028",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-029",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-030",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-031",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-032",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-033",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-034",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-035",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-036",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-037",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-038",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-039",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-040",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-041",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-042",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-043",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-044",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-045",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-046",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-047",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-048",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-049",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-050",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-051",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-052",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-053",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-054",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-055",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-056",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-057",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-058",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-059",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-060",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-061",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-062",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-063",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-064",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-065",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-066",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-067",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-068",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-069",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-070",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-071",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-072",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-073",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-074",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-075",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-076",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-077",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-078",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-079",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-080",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-081",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-082",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-083",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-084",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-085",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-086",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-087",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-088",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-089",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-090",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-091",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-092",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-093",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-094",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-095",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-096",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-097",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-098",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-099",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-100",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-101",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-102",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-103",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-104",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-105",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-106",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-107",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-108",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-109",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-110",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-111",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-112",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-113",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-114",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-115",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-116",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-117",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-118",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-119",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-120",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-121",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-122",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-123",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-124",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-125",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-126",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-127",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-128",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-129",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-130",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-131",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-132",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-133",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-134",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-135",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-136",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-137",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-138",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-139",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-140",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-141",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-142",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-143",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-144",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-145",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    },
+    {
+      "activity_id": "ACT-146",
+      "scheme_ids": [
+        "NSFDC-MFS",
+        "NSFDC-TL",
+        "NSFDC-AMY",
+        "NSFDC-UNY"
+      ],
+      "inherit_sector": true,
+      "status": "UNVERIFIED",
+      "evidence": [
+        "S001",
+        "S004"
+      ],
+      "derived": true,
+      "notes": "Inherited from sector-level mapping (UNVERIFIED). Per-activity verification required."
+    }
+  ]
+}

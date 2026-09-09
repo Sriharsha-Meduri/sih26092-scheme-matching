@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "kb_defs.schema.json",
+  "title": "SIH26092 KB shared definitions",
+  "description": "Shared shapes used across canonical KB entity schemas.",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable canonical identifier unique within its entity."
+    },
+    "source_ref": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Zero or more Source ids (see sources.json). Empty means no document-level source is attached."
+    },
+    "derived_marker": {
+      "type": "boolean",
+      "description": "true = this value/field is DERIVED (computed or interpreted), not directly stated in a source."
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "AVAILABLE",
+        "PARTIAL",
+        "MISSING",
+        "NOT_SPECIFIED",
+        "UNKNOWN"
+      ],
+      "description": "AVAILABLE=source states it; PARTIAL=weaker form stated; MISSING=no source provides it (null, do not guess); NOT_SPECIFIED=source is silent (distinct from explicit absence); UNKNOWN=existence uncertain."
+    },
+    "conditional_value": {
+      "type": "object",
+      "required": ["type", "variable", "branches"],
+      "properties": {
+        "type": { "const": "conditional" },
+        "variable": {
+          "type": "string",
+          "description": "Conditional input variable, e.g. 'repayment_state' or 'channel_type'."
+        },
+        "branches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["when", "value"],
+            "properties": {
+              "when": { "type": "object", "minProperties": 1, "description": "Single-condition map, e.g. {\"==\": \"started\"}" },
+              "value": { "description": "Typed value for this branch." },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "note": { "type": "string" }
+      }
+    },
+    "scalar_or_conditional": {
+      "description": "A scalar (number | integer | string) or an explicit conditional object or formula object.",
+      "oneOf": [
+        { "type": ["number", "integer", "string", "boolean", "null"] },
+        { "$ref": "#/$defs/conditional_value" },
+        {
+          "description": "Formula object, e.g. ELS loan cap: min(40L, 90% of course fee).",
+          "type": "object",
+          "properties": {
+            "type": { "const": "formula" },
+            "kind": { "type": "string" },
+            "terms": { "type": "array", "items": { "type": "object" } },
+            "derived": { "type": "boolean" },
+            "source_note": { "type": "string" }
+          },
+          "required": ["type", "kind", "terms"]
+        }
+      ]
+    }
+  }
+}

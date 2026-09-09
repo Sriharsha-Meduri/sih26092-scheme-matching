@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "golden_fixture.schema.json",
+  "title": "Golden test fixture",
+  "type": "object",
+  "required": [
+    "id", "name", "scenario", "input", "expected", "basis", "status"
+  ],
+  "properties": {
+    "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+    "name": { "type": "string" },
+    "scenario": { "type": "string", "enum": ["eligible", "eligible_boundary", "ineligible", "income_boundary", "loan_boundary", "activity_supported", "activity_unsupported", "multiple_match", "no_match", "missing_information", "education", "conditional_value"] },
+    "input": { "type": "object" },
+    "expected": {
+      "type": "object",
+      "properties": {
+        "eligible": { "type": ["boolean", "null"] },
+        "scheme_ids": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": "string", "enum": ["VERIFIED", "UNVERIFIED", "CONFLICTED", "NOT_SUPPORTED"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "basis": { "type": "string", "description": "Why this expected outcome is a verified KB fact (rule/financial/mapping reference)." },
+    "status": { "type": "string", "enum": ["VERIFIED", "UNVERIFIED"] }
+  }
+}

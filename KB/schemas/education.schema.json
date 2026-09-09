@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "education.schema.json",
+  "title": "Education knowledge (CourseFamily + EducationEligibility)",
+  "type": "object",
+  "required": ["entity", "education_eligibility", "course_families"],
+  "properties": {
+    "entity": { "const": "education" },
+    "education_eligibility": {
+      "type": ["object", "null"],
+      "required": ["scheme_id", "summary", "general_eligibility", "sources", "data_quality_issues"],
+      "properties": {
+        "scheme_id": { "type": "string" },
+        "summary": { "type": "string" },
+        "general_eligibility": {
+          "type": "array",
+          "items": {
+            "type": "object",
+          "required": ["rule_id", "field", "operator", "value", "notes"],
+          "properties": {
+            "rule_id": { "type": ["string", "null"] },
+              "field": { "type": "string" },
+              "operator": { "type": "string" },
+              "value": {},
+              "notes": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "sources": { "$ref": "kb_defs.schema.json#/$defs/source_ref" },
+        "data_quality_issues": { "$ref": "kb_defs.schema.json#/$defs/source_ref" }
+      }
+    },
+    "course_families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id", "family", "raw_text", "levels", "level_derived",
+          "coverage_status", "notes", "sources"
+        ],
+        "properties": {
+          "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+          "family": { "type": "string", "description": "Cleaned family label." },
+          "raw_text": { "type": "string", "description": "Verbatim course entry from source, e.g. 'Engineering (Diploma / B.Tech / B.E / M.Tech / M.E)'." },
+          "levels": { "type": "array", "items": { "type": "string" }, "description": "Levels parsed from the parenthesised list, e.g. ['Diploma','B.Tech',...]. May be empty for single-term families." },
+          "level_derived": { "$ref": "kb_defs.schema.json#/$defs/derived_marker", "description": "true = levels were PARSED from text (derived), tagged for Gemini verification in M2." },
+          "coverage_status": { "type": "string", "enum": ["LISTED_IN_COVERED_COURSES", "NOT_SPECIFIED"] },
+          "notes": { "type": ["string", "null"] },
+          "sources": { "$ref": "kb_defs.schema.json#/$defs/source_ref" }
+        }
+      }
+    }
+  }
+}

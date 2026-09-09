@@ -1,0 +1,249 @@
+{
+  "note": "Human-curated normalization decisions for build_kb.py. This is the INTERPRETATION layer: everything here is DERIVED from source text, never invented. Each entry records what was interpreted, why, and which source supports it. Raw files are never edited.",
+  "scheme_overrides": {
+    "NSFDC-TL": {
+      "project_cost_min": {
+        "exists": true,
+        "value": 140000,
+        "inclusive": false,
+        "raw": "140000.01",
+        "interpretation": "Raw float '140000.01' in field 'project_cost_min_inclusive' is an encoding hack for a strict/exclusive lower bound: project cost must EXCEED Rs 1,40,000.",
+        "data_quality_issues": ["DQ-001"]
+      },
+      "moratorium_months_conditional": {
+        "type": "conditional",
+        "variable": "activity_category",
+        "branches": [
+          {
+            "when": { "IN": ["Plantation", "Construction"] },
+            "value": 12,
+            "note": "Scheme notes: '12-month moratorium for plantation and construction activities.' Corroborated by Excel Current Scheme Snapshot (TL row)."
+          },
+          {
+            "when": { "NOT_IN": ["Plantation", "Construction"] },
+            "value": 6,
+            "note": "Default per current scheme page (S001) and Excel Snapshot."
+          }
+        ],
+        "note": "Normalized from moratorium_months=6 plus free-text notes."
+      }
+    },
+    "NSFDC-UNY": {
+      "beneficiary_rate": {
+        "type": "conditional",
+        "variable": "channel_type",
+        "branches": [
+          {
+            "when": { "IN": ["Co-operative Banks", "Co-operative Societies"] },
+            "value": 13,
+            "note": "13% through Cooperative Banks/Societies"
+          },
+          {
+            "when": { "IN": ["Small Finance Banks (SFBs)"] },
+            "value": 15,
+            "note": "15% through SFBs"
+          }
+        ],
+        "note": "Normalized from string '13 (Co-op Banks/Societies); 15 (SFBs)'. Value 13; 'Co-op Banks/Societies' is treated as a channel-group alias."
+      }
+    },
+    "NSFDC-ELS": {
+      "repayment": {
+        "type": "conditional",
+        "variable": "repayment_has_started",
+        "branches": [
+          { "when": { "==": false }, "value": 12, "note": "'12 if repayment has not started'" },
+          { "when": { "==": true }, "value": 10, "note": "'10 if repayment has started'" }
+        ],
+        "note": "Normalized from string '12 if repayment has not started; 10 if repayment has started'. Excel Snapshot corroborates 'Up to 10-12 years depending on status'."
+      },
+      "moratorium": {
+        "type": "conditional",
+        "variable": "repayment_has_started",
+        "branches": [
+          { "when": { "==": false }, "value": "Course period + 1 year", "note": "Course period is course-specific and NOT in the KB; requires user input or course-family assumption (M0 B7). " },
+          { "when": { "==": true }, "value": "up to 6 months", "note": "'up to 6 months if repayment has started'" }
+        ],
+        "note": "Normalized from string 'Course period + 1 year if repayment has not started; up to 6 months if repayment has started'."
+      },
+      "loan_cap_formula": {
+        "type": "formula",
+        "kind": "min",
+        "terms": [
+          { "kind": "const", "value": 4000000, "unit": "INR", "label": "Rs 40 lakh" },
+          { "kind": "percent_of", "percent": 90, "of": "course_fee", "unit": "INR", "label": "90% of course fee" }
+        ],
+        "derived": true,
+        "source_note": "Scheme notes: 'Maximum is Rs 40 lakh or 90% of course fee, whichever is less.'"
+      }
+    }
+  },
+  "rule_scope": {
+    "notes": "Maps the source string scope column to machine scope objects. scope_derived=true anywhere the mapping is an interpretation.",
+    "E001": { "type": "ALL_CORE_SCHEMES", "schemes": null, "scheme_group": null, "notes": "Source scope: 'All NSFDC credit/loan schemes'. Interpreted as all 5 core schemes in this KB." },
+    "E002": { "type": "ALL_CORE_SCHEMES", "schemes": null, "scheme_group": null, "notes": "Source scope: 'All NSFDC credit/loan schemes'. Effective date 2026-01-07 extracted from explanation text." },
+    "E003": { "type": "ALL_CORE_SCHEMES", "schemes": null, "scheme_group": null, "notes": "Source scope: 'All NSFDC credit/loan schemes'." },
+    "E004": { "type": "SCHEME_GROUP", "schemes": null, "scheme_group": "income_generating", "notes": "Source scope: 'Income-generating activities'." },
+    "E005": { "type": "SCHEME_GROUP", "schemes": null, "scheme_group": "income_generating", "notes": "Source scope: 'Income-generating activities'. Partnership: ALL members SC; each member family income <= 5L." },
+    "E006": { "type": "SCHEME_GROUP", "schemes": null, "scheme_group": "income_generating", "notes": "Source scope: 'Income-generating activities'. Society: ALL members SC; each member family income <= 5L." },
+    "E007": { "type": "EXTERNAL_DOMAIN", "schemes": [], "scheme_group": null, "notes": "Source scope: 'Skill Development Training' — a DOMAIN OUTSIDE the 5 core schemes (DQ-007). Do NOT auto-apply to loan eligibility; no income criterion stated. Retained in KB for context/FAQ matching." }
+  },
+  "data_quality_issues": [
+    {
+      "id": "DQ-001",
+      "category": "FORMAT_HAZARD",
+      "severity": "WARNING",
+      "status": "FLAGGED",
+      "description": "Term Loan lower bound encoded as float 140000.01 in 'project_cost_min_inclusive' — an encoding hack for a strict/exclusive boundary (> Rs 1,40,000). Value carries paise precision not present in the real scheme.",
+      "affected": ["NSFDC-TL", "FP-NSFDC-TL-001"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "M0 B2: model as explicit exclusive flag (cost_min_inclusive=false, value=140000). Official boundary semantics still to be verified from scheme document.",
+      "resolution_status": "HUMAN_DECISION_REQUIRED"
+    },
+    {
+      "id": "DQ-002",
+      "category": "CONDITIONAL_AMBIGUITY",
+      "severity": "WARNING",
+      "status": "FLAGGED",
+      "description": "UNY beneficiary_interest_rate is a channel-dependent string ('13 (Co-op Banks/Societies); 15 (SFBs)') instead of a scalar. Modeled as conditional on channel_type; applicability rules must be verified.",
+      "affected": ["NSFDC-UNY", "FP-NSFDC-UNY-007"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "Keep conditional model; verify channel-to-rate mapping from UNY policy document.",
+      "resolution_status": "HUMAN_DECISION_REQUIRED"
+    },
+    {
+      "id": "DQ-003",
+      "category": "CONDITIONAL_AMBIGUITY",
+      "severity": "WARNING",
+      "status": "FLAGGED",
+      "description": "ELS repayment_years is a state-dependent string ('12 if repayment has not started; 10 if repayment has started'). Modeled as conditional on repayment_has_started.",
+      "affected": ["NSFDC-ELS", "FP-NSFDC-ELS-008"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "Verify from ELS borrow/repayment terms (S019 ELS policy).",
+      "resolution_status": "HUMAN_DECISION_REQUIRED"
+    },
+    {
+      "id": "DQ-004",
+      "category": "CONDITIONAL_AMBIGUITY",
+      "severity": "WARNING",
+      "status": "FLAGGED",
+      "description": "ELS moratorium_months is a state-dependent string ('Course period + 1 year ... ; up to 6 months ...'). Moratorium depends on course duration which is NOT in the KB (user input or course-family assumption needed, M0 B7).",
+      "affected": ["NSFDC-ELS", "FP-NSFDC-ELS-009"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "Keep string form for the course-period branch; surface as a clarifier.",
+      "resolution_status": "HUMAN_DECISION_REQUIRED"
+    },
+    {
+      "id": "DQ-005",
+      "category": "INTERNAL_TENSION",
+      "severity": "WARNING",
+      "status": "FLAGGED",
+      "description": "ELS max_loan_amount (4,000,000) equals project_cost_max (4,000,000), while financing_percent=90 and the cap rule is 'lesser of Rs 40L or 90% of course fee'. A pure 90% model would cap the loan at 90% of project cost. The stated equality implies the Rs 40L cap dominates; mathematics needs official verification (course fee never in KB).",
+      "affected": ["NSFDC-ELS", "FP-NSFDC-ELS-004", "FP-NSFDC-ELS-011"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "M0 B7: engine should compute cap as min(40L, 90% x course_fee) using user-supplied course fee; keep project_cost_max as ELS admission ceiling.",
+      "resolution_status": "HUMAN_DECISION_REQUIRED"
+    },
+    {
+      "id": "DQ-006",
+      "category": "VALUE_SUSPICIOUS",
+      "severity": "INFO",
+      "status": "FLAGGED",
+      "description": "E002 income-ceiling effective date '2026-01-07' is embedded in rule explanation free-text. No publish/effective metadata exists on the source pages.",
+      "affected": ["E002"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "Promote to effective_from=2026-01-07 (done in normalized rule). Verify whether this denotes a revised income ceiling.",
+      "resolution_status": "HUMAN_DECISION_REQUIRED"
+    },
+    {
+      "id": "DQ-007",
+      "category": "SCOPE_AMBIGUITY",
+      "severity": "WARNING",
+      "status": "FLAGGED",
+      "description": "E007 is scoped to 'Skill Development Training' — a program domain OUTSIDE the 5 core credit/loan schemes in this KB. It must not be interpreted as a loan eligibility rule. Retained for context/FAQ use only.",
+      "affected": ["E007"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "Keep scope EXTERNAL_DOMAIN; exclude from loan evaluator unless the product defines a Skills domain (post-M1).",
+      "resolution_status": "BY_DESIGN"
+    },
+    {
+      "id": "DQ-008",
+      "category": "SOURCE_CONFLICT",
+      "severity": "WARNING",
+      "status": "FLAGGED",
+      "description": "NSFDC Compendium of Schemes (S009): raw JSON marks it 'Secondary/historical'; Excel Source Register (01_Core) marks Authority 'Primary'. Both representations preserved; NOT auto-resolved.",
+      "affected": ["S009"],
+      "source_conflict": true,
+      "first_detected": "M1.1",
+      "recommended_resolution": "M0 B1 (recommendation: treat S009 as Secondary/historical; rely on current pages for live parameters).",
+      "resolution_status": "HUMAN_DECISION_REQUIRED"
+    },
+    {
+      "id": "DQ-009",
+      "category": "STRUCTURAL_GAP",
+      "severity": "INFO",
+      "status": "RESOLVED",
+      "description": "KB/Master DB.txt is empty (0 bytes). Source register + scheme master JSON are the operative raw inputs. Empty file preserved unmodified.",
+      "affected": ["Master DB.txt"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "Resolved by design: JSON + Excel are the authoritative raw set; Master DB.txt kept as-is (M0 B4).",
+      "resolution_status": "BY_DESIGN"
+    },
+    {
+      "id": "DQ-010",
+      "category": "MISSING_DATA",
+      "severity": "WARNING",
+      "status": "FLAGGED",
+      "description": "Partner master data (names, states, districts, addresses, coordinates, phone, eligibility conditions, utilisation figures) is NOT ingested. Only partner PDF URLs are registered. Never fabricate partner facts.",
+      "affected": ["S010", "S011", "S012", "S013", "S014", "S015", "S016", "S017", "S018", "S019", "S020", "S021", "S022"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "M1.9: define partner schema + documented ingestion gap; partner ingestion recommended in the follow-on milestone (needs official PDF download; team decision required).",
+      "resolution_status": "HUMAN_DECISION_REQUIRED"
+    },
+    {
+      "id": "DQ-011",
+      "category": "NOT_SPECIFIED",
+      "severity": "INFO",
+      "status": "FLAGGED",
+      "description": "Exact per-scheme document checklists are not present in the corpus. Only the caste certificate requirement is rule-verified (E003). Application/limitation: P1 checklist output must clearly mark documents as indicative.",
+      "affected": ["NSFDC-MFS", "NSFDC-TL", "NSFDC-AMY", "NSFDC-UNY", "NSFDC-ELS"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "Confirm final document list from application forms (S006) during M2 verification.",
+      "resolution_status": "HUMAN_DECISION_REQUIRED"
+    },
+    {
+      "id": "DQ-012",
+      "category": "NOT_SPECIFIED",
+      "severity": "WARNING",
+      "status": "FLAGGED",
+      "description": "The corpus does not state per-activity or per-scheme eligibility. Activity-to-scheme mappings in this KB are UNVERIFIED (sector-level inheritance). Tailoring etc. must NOT be treated as verified eligible without individual confirmation (M2/Gemini).",
+      "affected": [],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "M1.6 marks all activity mappings UNVERIFIED; per-activity verification is a follow-on task.",
+      "resolution_status": "HUMAN_DECISION_REQUIRED"
+    },
+    {
+      "id": "DQ-013",
+      "category": "FORMAT_HAZARD",
+      "severity": "INFO",
+      "status": "RESOLVED",
+      "description": "Two exact-duplicate activity names appear in two sectors each: 'Bicycle Repairing Shops' (Small Industries + Service & Transport) and 'Saw Mills' (Small Industries + Service & Transport). Merged into single activity records carrying both sector_ids; both raw entries preserved in raw JSON.",
+      "affected": ["Bicycle Repairing Shops", "Saw Mills"],
+      "source_conflict": false,
+      "first_detected": "M1.1",
+      "recommended_resolution": "Resolved in M1.6: single activity id with multi-sector membership. Also note near-duplicates (see M1_1 audit section 10) left untouched by design.",
+      "resolution_status": "BY_DESIGN"
+    }
+  ]
+}

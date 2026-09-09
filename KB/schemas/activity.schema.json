@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "activity.schema.json",
+  "title": "Canonical Eligible Activity",
+  "type": "object",
+  "required": [
+    "id", "name", "source_name", "sector_ids", "aliases",
+    "normalization_notes", "sources", "data_quality_issues"
+  ],
+  "properties": {
+    "id": { "$ref": "kb_defs.schema.json#/$defs/id" },
+    "name": { "type": "string", "description": "Cleaned canonical display name (formatting cleaned, meaning unchanged)." },
+    "source_name": { "type": "string", "description": "Authoritative activity wording preserved verbatim from the source." },
+    "sector_ids": { "type": "array", "items": { "type": "string" }, "description": "One or more sectors; >1 only for exact duplicates across sectors." },
+    "aliases": { "type": "array", "items": { "type": "string" }, "description": "Empty unless the source provides an alias; never invented." },
+    "normalization_notes": { "type": ["string", "null"] },
+    "sources": { "$ref": "kb_defs.schema.json#/$defs/source_ref" },
+    "data_quality_issues": { "$ref": "kb_defs.schema.json#/$defs/source_ref" }
+  }
+}
