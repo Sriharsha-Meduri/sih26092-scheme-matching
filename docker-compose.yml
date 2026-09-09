@@ -17,12 +17,15 @@ services:
       retries: 10
 
   backend:
-    build: ./apps/backend
+    build:
+      context: .
+      dockerfile: apps/backend/Dockerfile
     environment:
       ENV: development
       DATABASE_URL: postgresql+psycopg://sih:sih_dev@postgres:5432/sih26092
       CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
-      RECOMMENDATION_ENGINE: mock
+      RECOMMENDATION_ENGINE: module
+      RECOMMENDATION_ENGINE_MODULE: app.intelligence.bridge:recommend
     ports:
       - "8000:8000"
     depends_on:
